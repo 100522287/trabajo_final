@@ -544,15 +544,21 @@ footer {
 }
 
 .iconos-sociales a img {
-    width: 22px; /* Ajuste de tamaño para imágenes */
-    height: 22px;
+    width: 100%; /* Ajuste de tamaño para imágenes */
+    height: 100%;
     object-fit: contain;
+    padding: 3px;
 
 }
 
 .iconos-sociales a:hover {
     background-color: #FFB703;
     transform: scale(1.1);
+}
+
+.iconos-sociales a:hover img {
+    /* Al pasar el ratón (fondo amarillo), volvemos al color original (negro) */
+    filter: none; 
 }
 
 /* --- PAGO SEGURO CON IMÁGENES LOCALES --- */
