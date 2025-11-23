@@ -80,12 +80,4 @@ function carrusel() {
 document.addEventListener("DOMContentLoaded", function() {
     // Iniciar Carrusel
     carrusel();
-
-    // Configurar Selector de Idioma
-    const selector = document.getElementById('selector-idioma');
-    if (selector) {
-        selector.addEventListener('change', function(e) {
-            changeLanguage(e.target.value);
-        });
-    }
 });
