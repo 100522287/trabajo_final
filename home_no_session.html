@@ -4,8 +4,6 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mochileros por el mundo</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="styles/estilos.css">
     </head>  
 
@@ -13,71 +11,81 @@
         
         <div class="layout-global">
 
-        <aside class="zona-publicidad publicidad-izquierda">
-            <div class="titulo-ad">Te recomendamos</div>
-            
-            <a href="https://www.amazon.es/NORTIV8-Senderismo-Impermeables-Zapatillas-Antideslizante/dp/B0BFPTSSQW/ref=sr_1_9?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3NVNTHXTFWFRC&dib=eyJ2IjoiMSJ9.Yx5fC9pS7fCUSAf_DknRlOOx1HqiLS210e7VWR1i1i7l1vMM-uacgd-sZQxAoTctqrB4m7qgqGSsKukRWI_0AU4X0ByUoC03zH1Rdnwxa2nL_Sahzi8VBXwxZyJ0s0B-pGauSN_l1uC9OgvuQKISff1fHOczmCUUI_Pqt5vHXTcB3xkc9L3h2TzV4K87_OZq5In_ht5Yyez0PKv0zDUM0nolaraxzrUDROiKBzHrJuQFrFnWKsFTsaCjswhsDSWUKuTHSgFAUHeyr41nYjCpzUVAbzU5OJmPMh0OIa8mnhE.0L7J4d8OExw-tHEMmVK61r117Qd10AZMh6fz_NIjhok&dib_tag=se&keywords=botas%2Bsenderismo%2Bimpermeables&qid=1763934505&sprefix=botas%2Bsenderismo%2Bimpermeable%2Caps%2C61&sr=8-9&th=1&psc=1" class="amazon-card">
-                <div class="img-container">
-                    <img src="images/izquierda-arriba.jpg" alt="Botas senderismo">
-                </div>
-                <div class="info-ad">
-                    <p class="titulo-prod">Botas Senderismo Impermeables</p>
-                    <div class="precio-ad">50,86€ <i class="fab fa-amazon"></i></div>
-                    <button class="btn-amazon">Ver en Amazon</button>
-                </div>
-            </a>
+            <!-- PUBLICIDAD IZQUIERDA -->
+            <aside class="zona-publicidad publicidad-izquierda">
+                <div class="titulo-ad" data-lang="ad_recommend">Te recomendamos</div>
+                
+                <!-- Producto 1 -->
+                <a href="https://www.amazon.es/NORTIV8-Senderismo-Impermeables-Zapatillas-Antideslizante/dp/B0BFPTSSQW/" target="_blank" class="amazon-card">
+                    <div class="img-container">
+                        <img src="images/izquierda-arriba.jpg" alt="Botas senderismo">
+                    </div>
+                    <div class="info-ad">
+                        <p class="titulo-prod" data-lang="prod_boots1">Botas Senderismo Impermeables</p>
+                        <div class="precio-ad">50,86€ <i class="fab fa-amazon"></i></div>
+                        <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
+                    </div>
+                </a>
 
-            <a href="https://www.amazon.es/Columbia-Waterproof-Impermeables-Trekking-Senderismo/dp/B0CLW4PW32/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2JLRYHYKSWDRF&dib=eyJ2IjoiMSJ9.M7XzPbrRDmfSeUBvew-2Ct_7k6ah-c4PeW9uHPgZedTR4ZrwYhQ3la-QjeWizcnOtcZA4h3lNq25fft5zM_WoN5Wbn2ojuehk_EUfzto288R_wwbNr8Y8j5lblvsA7fXEyddC9MIn8XXSj3wQ2YQw0SHZfGg3QjnDkUFCqMhUSooPFtYdfzXANjiB-t4CxfZ0PxvpNF-bm4zgFGNhG5i76Qd0uP7-LCjFRHT6cF5rg8avM89PZ6qd68QwxnkaDqWY7LGo9kyDk9y0YMiIupM8am5-X8mznmudeacT-hgwoM.nUd_rp5aWvhyH8DTIVyLf88ufcgiQifnPP4FmNRw7ww&dib_tag=se&keywords=botas%2Bde%2Bmonta%C3%B1a%2Bpiel%2Bpro&qid=1763934622&sprefix=botas%2Bde%2Bmonta%C3%B1a%2Bpiel%2Bpro%2Caps%2C65&sr=8-1&th=1&psc=1" class="amazon-card">
-                <div class="img-container">
-                    <img src="images/izquierda-abajo.jpg" alt="Botas Piel">
-                </div>
-                <div class="info-ad">
-                    <p class="titulo-prod">Botas de Montaña Piel - Pro</p>
-                    <div class="precio-ad">63,00€ <i class="fab fa-amazon"></i></div>
-                    <button class="btn-amazon">Ver en Amazon</button>
-                </div>
-            </a>
-        </aside>
+                <!-- Producto 2 -->
+                <a href="https://www.amazon.es/Columbia-Waterproof-Impermeables-Trekking-Senderismo/dp/B0CLW4PW32/" target="_blank" class="amazon-card">
+                    <div class="img-container">
+                        <img src="images/izquierda-abajo.jpg" alt="Botas Piel">
+                    </div>
+                    <div class="info-ad">
+                        <p class="titulo-prod" data-lang="prod_boots2">Botas de Montaña Piel - Pro</p>
+                        <div class="precio-ad">63,00€ <i class="fab fa-amazon"></i></div>
+                        <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
+                    </div>
+                </a>
+            </aside>
+
+            <!-- CONTENIDO PRINCIPAL -->
             <div class="contenedor-principal">
 
                 <nav class="navbar">
                     <ul class="menu-header-footer">
-                        <li><a href="#">Packs</a></li>
-                        <li><a href="#">Foro</a></li>
-                        <li><a href="#">Artículos</a></li>
-                        <li><a href="#">Preguntas frecuentes</a></li>
-                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#" data-lang="nav_packs">Packs</a></li>
+                        <li><a href="#" data-lang="nav_forum">Foro</a></li>
+                        <li><a href="#" data-lang="nav_articles">Artículos</a></li>
+                        <li><a href="#" data-lang="nav_faq">Preguntas frecuentes</a></li>
+                        <li><a href="#" data-lang="nav_about">Nosotros</a></li>
                     </ul>
                     <div class="idioma-login">
-                        <a href="#">Idioma</a>
-                        <a href="#">Iniciar Sesión</a>
+                        <!-- SELECTOR DE IDIOMA -->
+                        <select id="selector-idioma" class="selector-idioma">
+                            <option value="es">Español</option>
+                            <option value="en">English</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                        <a href="#" data-lang="nav_login">Iniciar Sesión</a>
                     </div>
                 </nav>
 
                 <header class="hero-header">
                     <div class="hero-content">
-                        <h1 class="logo">Mochileros por el mundo</h1>
-                        <p>Tu próxima aventura empieza aquí.</p>
-                        <a href="#" class="btn-negro">Botón</a>
+                        <h1 class="logo" data-lang="hero_title">Mochileros por el mundo</h1>
+                        <p data-lang="hero_subtitle">Tu próxima aventura empieza aquí.</p>
+                        <a href="#" class="btn-negro" data-lang="hero_btn">Botón</a>
                     </div>
                 </header>
 
                 <section class="seccion-packs">
-                    <h2>Packs ofertados</h2>
+                    <h2 data-lang="sec_packs">Packs ofertados</h2>
                     
                     <div class="rejilla_packs">
                         
                         <div class="tarjeta-pack">
                             <div class="imagen-pack">
                                 <img src="images/budapest.jpg" alt="Budapest">
-                                <span class="etiqueta-precio">Desde 950€</span>
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 950€</span>
                             </div>
                             <div class="contenido-pack">
-                                <h3>Europa Imperial</h3>
+                                <h3 data-lang="pack1_title">Europa Imperial</h3>
                                 <ul>
-                                    <li>8 días / 7 noches</li>
-                                    <li>Tren alta velocidad</li>
-                                    <li>Hoteles 4* céntricos</li>
+                                    <li data-lang="pack1_li1">8 días / 7 noches</li>
+                                    <li data-lang="pack1_li2">Tren alta velocidad</li>
+                                    <li data-lang="pack1_li3">Hoteles 4* céntricos</li>
                                 </ul>
                             </div>
                         </div>
@@ -85,14 +93,14 @@
                         <div class="tarjeta-pack">
                             <div class="imagen-pack">
                                 <img src="images/roma.jpg" alt="Roma">
-                                <span class="etiqueta-precio">Desde 1.120€</span>
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 1.120€</span>
                             </div>
                             <div class="contenido-pack">
-                                <h3>Renacimiento Italiano</h3>
+                                <h3 data-lang="pack2_title">Renacimiento Italiano</h3>
                                 <ul>
-                                    <li>9 días / 8 noches</li>
-                                    <li>Bed & Breakfast</li>
-                                    <li>Museos Vaticanos</li>
+                                    <li data-lang="pack2_li1">9 días / 8 noches</li>
+                                    <li data-lang="pack2_li2">Bed & Breakfast</li>
+                                    <li data-lang="pack2_li3">Museos Vaticanos</li>
                                 </ul>
                             </div>
                         </div>
@@ -100,14 +108,14 @@
                         <div class="tarjeta-pack">
                             <div class="imagen-pack">
                                 <img src="images/kioto.jpg" alt="Kioto">
-                                <span class="etiqueta-precio">Desde 2.400€</span>
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 2.400€</span>
                             </div>
                             <div class="contenido-pack">
-                                <h3>Magia Asiática</h3>
+                                <h3 data-lang="pack3_title">Magia Asiática</h3>
                                 <ul>
-                                    <li>15 días / 14 noches</li>
-                                    <li>Vuelos multidestino</li>
-                                    <li>Ryokan en Kioto</li>
+                                    <li data-lang="pack3_li1">15 días / 14 noches</li>
+                                    <li data-lang="pack3_li2">Vuelos multidestino</li>
+                                    <li data-lang="pack3_li3">Ryokan en Kioto</li>
                                 </ul>
                             </div>
                         </div>
@@ -115,14 +123,14 @@
                         <div class="tarjeta-pack">
                             <div class="imagen-pack">
                                 <img src="images/cuzco.jpg" alt="Cuzco">
-                                <span class="etiqueta-precio">Desde 1.850€</span>
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 1.850€</span>
                             </div>
                             <div class="contenido-pack">
-                                <h3>Aventura Andina</h3>
+                                <h3 data-lang="pack4_title">Aventura Andina</h3>
                                 <ul>
-                                    <li>11 días / 10 noches</li>
-                                    <li>Vuelos incluidos</li>
-                                    <li>Machu Picchu</li>
+                                    <li data-lang="pack4_li1">11 días / 10 noches</li>
+                                    <li data-lang="pack4_li2">Vuelos incluidos</li>
+                                    <li data-lang="pack4_li3">Machu Picchu</li>
                                 </ul>
                             </div>
                         </div>
@@ -130,14 +138,14 @@
                         <div class="tarjeta-pack">
                             <div class="imagen-pack">
                                 <img src="images/safari.webp" alt="Safari Kenia">
-                                <span class="etiqueta-precio">Desde 2.150€</span>
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 2.150€</span>
                             </div>
                             <div class="contenido-pack">
-                                <h3>Safari en Kenia (Masai Mara)</h3>
+                                <h3 data-lang="pack5_title">Safari en Kenia</h3>
                                 <ul>
-                                    <li>10 días / 9 noches</li>
-                                    <li>Rutas en 4x4 privado</li>
-                                    <li>Camping de lujo en la sabana</li>
+                                    <li data-lang="pack5_li1">10 días / 9 noches</li>
+                                    <li data-lang="pack5_li2">Rutas en 4x4 privado</li>
+                                    <li data-lang="pack5_li3">Camping de lujo</li>
                                 </ul>
                             </div>
                         </div>
@@ -146,7 +154,7 @@
                 </section>
 
                 <section class="seccion-articulos">
-                    <h2>Artículos de utilidad</h2>
+                    <h2 data-lang="sec_articles">Artículos de utilidad</h2>
                     
                     <div class="contenedor-carrusel">
                         <button class="nav-btn" id="boton_izq_articulos">&#60;</button>
@@ -158,8 +166,8 @@
                                     <img src="images/copenhagen.jpg" alt="Copenhague">
                                 </div>
                                 <div class="articulo-info">
-                                    <h4>Copenhague en bicicleta</h4>
-                                    <p>Descubre la gastronomía de vanguardia y el equilibrio nórdico sobre dos ruedas.</p>
+                                    <h4 data-lang="art1_title">Copenhague en bicicleta</h4>
+                                    <p data-lang="art1_desc">Descubre la gastronomía de vanguardia y el equilibrio nórdico sobre dos ruedas.</p>
                                 </div>
                             </div>
 
@@ -168,8 +176,8 @@
                                     <img src="images/chefchaouen.jpg" alt="Chefchaouen">
                                 </div>
                                 <div class="articulo-info">
-                                    <h4>48h en Chefchaouen</h4>
-                                    <p>Cómo encontrar los mejores miradores en la ciudad más fotogénica de Marruecos.</p>
+                                    <h4 data-lang="art2_title">48h en Chefchaouen</h4>
+                                    <p data-lang="art2_desc">Cómo encontrar los mejores miradores en la ciudad más fotogénica de Marruecos.</p>
                                 </div>
                             </div>
 
@@ -178,8 +186,8 @@
                                     <img src="images/sevilla.jpg" alt="Sevilla">
                                 </div>
                                 <div class="articulo-info">
-                                    <h4>El arte de tapear en Sevilla</h4>
-                                    <p>Del Alcázar a los patios. Te enseñamos dónde sentir el verdadero flamenco.</p>
+                                    <h4 data-lang="art3_title">El arte de tapear en Sevilla</h4>
+                                    <p data-lang="art3_desc">Del Alcázar a los patios. Te enseñamos dónde sentir el verdadero flamenco.</p>
                                 </div>
                             </div>
                             
@@ -188,8 +196,8 @@
                                     <img src="images/paris.jpg" alt="Paris">
                                 </div>
                                 <div class="articulo-info">
-                                    <h4>Escapada a París</h4>
-                                    <p>Ruta alternativa por los barrios bohemios de París lejos de la Torre Eiffel.</p>
+                                    <h4 data-lang="art4_title">Escapada a París</h4>
+                                    <p data-lang="art4_desc">Ruta alternativa por los barrios bohemios de París lejos de la Torre Eiffel.</p>
                                 </div>
                             </div>
 
@@ -202,77 +210,80 @@
                 <footer>
                     <div class="footer-top">
                         <div class="col-footer">
-                            <h4>Mochileros por el mundo</h4>
+                            <h4 data-lang="footer_title">Mochileros por el mundo</h4>
                             <div class="bloque-siguenos">
-                                <h5>SÍGUENOS</h5>
+                                <h5 data-lang="follow_us">SÍGUENOS</h5>
                                 <div class="iconos-sociales">
-                                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-                                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <!-- Iconos locales -->
+                                    <a href="https://www.instagram.com/" target="_blank" title="Instagram"><img src="images/instagram.png" alt="IG"></a>
+                                    <a href="https://www.facebook.com/?locale=es_ES%2F" target="_blank" title="Facebook"><img src="images/facebook.png" alt="FB"></a>
+                                    <a href="https://www.tiktok.com/es" target="_blank" title="TikTok"><img src="images/tiktok.png" alt="TK"></a>
+                                    <a href="https://www.youtube.com/" target="_blank" title="YouTube"><img src="images/youtube.png" alt="YT"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-footer">
-                            <h4>Legal</h4>
-                            <p>Términos y condiciones</p>
-                            <p>Información</p>
-                            <p>Página</p>
+                            <h4 data-lang="legal">Legal</h4>
+                            <p data-lang="terms">Términos y condiciones</p>
+                            <p data-lang="info">Información</p>
+                            <p data-lang="page">Página</p>
                         </div>
                         <div class="col-footer">
-                            <h4>Ayuda</h4>
-                            <p>Preguntas frecuentes</p>
-                            <p>Problemas</p>
-                            <p>Incidencias web</p>
+                            <h4 data-lang="help">Ayuda</h4>
+                            <p data-lang="faq_short">Preguntas frecuentes</p>
+                            <p data-lang="problems">Problemas</p>
+                            <p data-lang="incidents">Incidencias web</p>
                         </div>
                         <div class="col-footer">
-                            <h4>Contacto</h4>
-                            <p>Dudas</p>
-                            <p>Número telefónico</p>
+                            <h4 data-lang="contact">Contacto</h4>
+                            <p data-lang="doubts">Dudas</p>
+                            <p data-lang="phone">Número telefónico</p>
                         </div>
                     </div>
 
                     <div class="footer-bottom-pago">
-                        <h5>PAGO SEGURO</h5>
+                        <h5 data-lang="secure_pay">PAGO SEGURO</h5>
                         <div class="iconos-pago">
-                            <div class="tarjeta-icono"><i class="fab fa-cc-amex" style="color:#006fcf;"></i></div>
-                            <div class="tarjeta-icono"><i class="fab fa-cc-visa" style="color:#1a1f71;"></i></div>
-                            <div class="tarjeta-icono"><i class="fab fa-cc-diners-club" style="color:#0079be;"></i></div>
-                            <div class="tarjeta-icono"><i class="fab fa-cc-mastercard" style="color:#eb001b;"></i></div>
-                            <div class="tarjeta-icono"><i class="fab fa-paypal" style="color:#003087;"></i></div>
-                            <div class="tarjeta-icono euro6000"><span>E 6000</span></div>
+                            <!-- Iconos locales -->
+                            <div class="tarjeta-icono"><img src="images/visa.png" alt="Visa"></div>
+                            <div class="tarjeta-icono"><img src="images/matercard.png" alt="Mastercard"></div>
+                            <div class="tarjeta-icono"><img src="images/paypal.png" alt="Paypal"></div>
                         </div>
                     </div>
                 </footer>
 
-            </div> <aside class="zona-publicidad publicidad-derecha">
-                <div class="titulo-ad">Top Ventas</div>
+            </div> 
 
-                <a href="https://www.amazon.es/PICSIL-Impermeable-Capacidad-Crosstraining-Senderismo/dp/B0DV9GKVM4/ref=sr_1_1_sspa?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=BL1IJZZQI14P&dib=eyJ2IjoiMSJ9.ZYHN5XscPohHT0Y4xGDp7nurvT3pPxCyGplD4iDdMScWksh27vMUEwIggrSUx66_ompOOw6ZidV7wjSWYAgaCO_9AdQFrfx5nxZCElZJ0vJwQ0nv4nHvghF5vnIpVmqpBgdptRbaIlCnPGq9Z3lmXOb0gQIN643xTabseX6kGUcCbzxmpnP5D5wM4E4GrVpaZ7UQ0Rp91B62r4giZlWuA84I9vYxtPL_fkF8cMXlIxEUJEolgUqdGZ1T8-c7Vi0fl68HSaqbwLH8RDicUmE4o8wg7x2yCWfhbwqoBxHiw7I.D7N-87L5jGvXr6tPUWgyK5pfknha76F8Q3gNDw3GpIk&dib_tag=se&keywords=mochila%2Btactica%2B40l&qid=1763934734&sprefix=mochila%2Btactica%2B40l%2Caps%2C65&sr=8-1-spons&aref=wQ2O6bfvT0&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1" class="amazon-card">
+            <!-- PUBLICIDAD DERECHA -->
+            <aside class="zona-publicidad publicidad-derecha">
+                <div class="titulo-ad" data-lang="ad_top">Top Ventas</div>
+
+                <a href="https://www.amazon.es/PICSIL-Impermeable-Capacidad-Crosstraining-Senderismo/dp/B0DV9GKVM4" target="_blank" class="amazon-card">
                     <div class="img-container">
                         <img src="images/derecha-arriba.jpg" alt="Mochila Táctica">
                     </div>
                     <div class="info-ad">
-                        <p class="titulo-prod">Mochila Táctica 40L</p>
+                        <p class="titulo-prod" data-lang="prod_backpack">Mochila Táctica 40L</p>
                         <div class="precio-ad">129,95€ <i class="fab fa-amazon"></i></div>
-                        <button class="btn-amazon">Ver en Amazon</button>
+                        <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
                     </div>
                 </a>
 
-                <a href="https://www.amazon.es/Night-Cat-Tienda-Persona-Ultraligero/dp/B0DYD4D2XB/ref=sr_1_1_sspa?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=M3A3U3BGY9DZ&dib=eyJ2IjoiMSJ9.mwwVA7877eAyDJigK62J8kVDn4FXNFkKRQ-qWG3uKotG8hjkzQ2W5o3wrQHK9HQx9A9QBjF2H4LsyIorRw42mPWPFG28akbiff5C4lsTNl89pBfh_CL31nD8x-PIPryfV-zLGW2h2SVwovwPUnP8FLebiX8VIurKiBg_3-MxDAdNRIwzwKHDe2s1gVCeXR5xSeldqh1mnKe6kvcTCXIBeZOMRXS_Q5japhGqLKABzO4bEXbBm_Be1uNlsC_CJkfw_JMJ-QPF7K1UxKfHh2BS9loEaDbuL32g3qbEODxjkG4.1eJVEpb6ts1wXxbu8b9KyA4FyBa_Bk_x0wxorN_NcDo&dib_tag=se&keywords=tienda%2Bcampa%C3%B1a%2Bultraligera&qid=1763934842&sprefix=tienda%2Bcampa%C3%B1a%2Bultraligera%2Caps%2C74&sr=8-1-spons&aref=D6nyiqpLzT&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&psc=1" class="amazon-card">
+                <a href="https://www.amazon.es/Night-Cat-Tienda-Persona-Ultraligero/dp/B0DYD4D2XB" target="_blank class="amazon-card">
                     <div class="img-container">
                         <img src="images/derecha-abajo.jpg" alt="Tienda Campaña">
                     </div>
                     <div class="info-ad">
-                        <p class="titulo-prod">Tienda Campaña Ultraligera</p>
+                        <p class="titulo-prod" data-lang="prod_tent">Tienda Campaña Ultraligera</p>
                         <div class="precio-ad">152,99€ <i class="fab fa-amazon"></i></div>
-                        <button class="btn-amazon">Ver en Amazon</button>
+                        <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
                     </div>
                 </a>
             </aside>
 
-        </div> <script type="text/javascript" src="scripts/main.js"></script>
+        </div> 
+        
+        <script type="text/javascript" src="scripts/main.js"></script>
 
     </body>
 </html>
