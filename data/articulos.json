@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "titulo": "Copenhague en bicicleta",
+        "descripcion": "Descubre la capital danesa sobre dos ruedas. Rutas imprescindibles y consejos de alquiler.",
+        "imagen": "images/copenhagen.jpg",
+        "lang_id_titulo": "art1_title",
+        "lang_id_desc": "art1_desc"
+    },
+    {
+        "id": 2,
+        "titulo": "48h en Chefchaouen",
+        "descripcion": "Cómo encontrar los mejores miradores en la ciudad más fotogénica de Marruecos.",
+        "imagen": "images/chefchaouen.jpg",
+        "lang_id_titulo": "art2_title",
+        "lang_id_desc": "art2_desc"
+    },
+    {
+        "id": 3,
+        "titulo": "El arte de tapear en Sevilla",
+        "descripcion": "Del Alcázar a los patios. Te enseñamos dónde sentir el verdadero flamenco.",
+        "imagen": "images/sevilla.jpg",
+        "lang_id_titulo": "art3_title",
+        "lang_id_desc": "art3_desc"
+    },
+    {
+        "id": 4,
+        "titulo": "Escapada a París",
+        "descripcion": "Ruta alternativa por los barrios bohemios de París lejos de la Torre Eiffel.",
+        "imagen": "images/paris.jpg",
+        "lang_id_titulo": "art4_title",
+        "lang_id_desc": "art4_desc"
+    },
+    {
+        "id": 5,
+        "titulo": "Japón para principiantes",
+        "descripcion": "Todo lo que necesitas saber antes de tu primer viaje al país del sol naciente.",
+        "imagen": "images/kioto.jpg",
+        "lang_id_titulo": "art5_title",
+        "lang_id_desc": "art5_desc"
+    },
+    {
+        "id": 6,
+        "titulo": "Bali: Templos y Arrozales",
+        "descripcion": "Una ruta espiritual y fotográfica por el corazón verde de Indonesia.",
+        "imagen": "images/safari.webp",
+        "lang_id_titulo": "art6_title",
+        "lang_id_desc": "art6_desc"
+    },
+    {
+        "id": 7,
+        "titulo": "Nueva York en 5 días",
+        "descripcion": "La guía definitiva para no perderte nada en la Gran Manzana sin gastar una fortuna.",
+        "imagen": "images/budapest.jpg",
+        "lang_id_titulo": "art7_title",
+        "lang_id_desc": "art7_desc"
+    },
+    {
+        "id": 8,
+        "titulo": "Patagonia: Fin del Mundo",
+        "descripcion": "Senderismo extremo y glaciares. Prepárate para la aventura de tu vida.",
+        "imagen": "images/cuzco.jpg",
+        "lang_id_titulo": "art8_title",
+        "lang_id_desc": "art8_desc"
+    },
+    {
+        "id": 9,
+        "titulo": "Praga Mágica",
+        "descripcion": "Leyendas, castillos y cerveza artesanal en una de las joyas de Europa.",
+        "imagen": "images/roma.jpg",
+        "lang_id_titulo": "art9_title",
+        "lang_id_desc": "art9_desc"
+    }
+]

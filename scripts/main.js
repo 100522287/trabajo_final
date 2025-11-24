@@ -1,83 +1,72 @@
-// --- FUNCIÓN CARRUSEL (ESTILO SOLICITADO) ---
-function carrusel() {
-    console.log("Iniciando carrusel de artículos...");
-
-    // 1. DATOS DEL CARRUSEL (ARRAYS)
-    // Usamos las claves de traducción para que el idioma cambie dinámicamente
-    const imagenesArticulos = [
-        "images/copenhagen.jpg",
-        "images/chefchaouen.jpg",
-        "images/sevilla.jpg",
-        "images/paris.jpg"
-    ];
-    
-    const titulosKeys = ["art1_title", "art2_title", "art3_title", "art4_title"];
-    const descKeys = ["art1_desc", "art2_desc", "art3_desc", "art4_desc"];
-
-    // Elementos del DOM
-    let track = document.getElementById("track-articulos");
-    let botonIzq = document.getElementById("boton_izq_articulos");
-    let botonDer = document.getElementById("boton_der_articulos");
-
-    // Verificación
-    if (!track || !botonIzq || !botonDer) {
-        console.error("Elementos del carrusel no encontrados");
-        return;
-    }
-
-    // 2. FUNCIÓN DE CARGA (Genera el HTML dinámicamente)
-    function cargarArticulos() {
-        let htmlContent = "";
-        
-        for (let i = 0; i < imagenesArticulos.length; i++) {
-            // Obtenemos el texto inicial en español del diccionario para pintarlo la primera vez
-            let tituloTexto = translations['es'][titulosKeys[i]];
-            let descTexto = translations['es'][descKeys[i]];
-
-            htmlContent += `
-                <div class="tarjeta-articulo">
-                    <div class="articulo-img">
-                        <img src="${imagenesArticulos[i]}" alt="Articulo ${i}">
-                    </div>
-                    <div class="articulo-info">
-                        <!-- Importante: Añadimos data-lang para que el traductor funcione después -->
-                        <h4 data-lang="${titulosKeys[i]}">${tituloTexto}</h4>
-                        <p data-lang="${descKeys[i]}">${descTexto}</p>
-                    </div>
-                </div>
-            `;
-        }
-        track.innerHTML = htmlContent;
-    }
-
-    // 3. FUNCIONES DE MOVIMIENTO (Scroll)
-    function obtenerAnchoDesplazamiento() {
-        let tarjeta = track.querySelector('.tarjeta-articulo');
-        if (tarjeta) {
-            return tarjeta.offsetWidth + 30; // ancho + gap
-        }
-        return 300;
-    }
-
-    function avanzar() {
-        let desplazamiento = obtenerAnchoDesplazamiento();
-        track.scrollLeft += desplazamiento;
-    }
-
-    function retroceder() {
-        let desplazamiento = obtenerAnchoDesplazamiento();
-        track.scrollLeft -= desplazamiento;
-    }
-
-    // 4. EVENT LISTENERS
-    botonDer.addEventListener("click", avanzar);
-    botonIzq.addEventListener("click", retroceder);
-
-    // Cargar los artículos al iniciar
-    cargarArticulos();
-}
-
 document.addEventListener("DOMContentLoaded", function() {
     // Iniciar Carrusel
     carrusel();
 });
+
+// --- FUNCIÓN CARRUSEL (CARGA DINÁMICA JSON) ---
+async function carrusel() {
+    console.log("Iniciando carrusel de artículos...");
+
+    const track = document.getElementById("track-articulos");
+    const botonIzq = document.getElementById("boton_izq_articulos");
+    const botonDer = document.getElementById("boton_der_articulos");
+
+    // Verificación de seguridad
+    if (!track || !botonIzq || !botonDer) {
+        console.error("No se encuentran los elementos del carrusel en el HTML");
+        return;
+    }
+
+    // 1. CARGAR DATOS DESDE JSON (AJAX/Fetch)
+    try {
+        // Pide los datos al archivo
+        const response = await fetch('data/articulos.json');
+        
+        // Si hay error en la red
+        if (!response.ok) throw new Error('No se pudo cargar articulos.json');
+        
+        const articulos = await response.json();
+        
+        // Generar HTML dinámicamente
+        let htmlContent = "";
+        articulos.forEach(art => {
+            htmlContent += `
+                <div class="tarjeta-articulo">
+                    <div class="articulo-img">
+                        <img src="${art.imagen}" alt="${art.titulo}">
+                    </div>
+                    <div class="articulo-info">
+                        <h4 data-lang="${art.lang_id_titulo}">${art.titulo}</h4>
+                        <p data-lang="${art.lang_id_desc}">${art.descripcion}</p>
+                    </div>
+                </div>
+            `;
+        });
+        
+        // Inyectar el HTML en la página
+        track.innerHTML = htmlContent;
+
+    } catch (error) {
+        console.error("Error cargando los artículos:", error);
+        // Fallback visual por si algo falla
+        track.innerHTML = "<p style='padding:20px'>Cargando artículos...</p>";
+    }
+
+    // 2. FUNCIONES DE MOVIMIENTO
+    function obtenerAnchoDesplazamiento() {
+        const tarjeta = track.querySelector('.tarjeta-articulo');
+        return tarjeta ? tarjeta.offsetWidth + 30 : 300; 
+    }
+
+    function avanzar() {
+        track.scrollBy({ left: obtenerAnchoDesplazamiento(), behavior: 'smooth' });
+    }
+
+    function retroceder() {
+        track.scrollBy({ left: -obtenerAnchoDesplazamiento(), behavior: 'smooth' });
+    }
+
+    // 3. EVENT LISTENERS
+    botonDer.addEventListener("click", avanzar);
+    botonIzq.addEventListener("click", retroceder);
+}
