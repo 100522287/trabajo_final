@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paquetes - Mochileros por el mundo</title>
+        <link rel="stylesheet" type="text/css" href="styles/estilos.css">
+        <link rel="stylesheet" type="text/css" href="styles/e_packs.css">
+    </head>  
+
+    <body class="body-mochileros">
+        
+        <div class="layout-global">
+
+            <!-- PUBLICIDAD IZQUIERDA -->
+            <aside class="zona-publicidad publicidad-izquierda">
+                <div class="titulo-ad" data-lang="ad_recommend">Te recomendamos</div>
+                
+                <!-- Producto 1 -->
+                <a href="https://www.amazon.es/NORTIV8-Senderismo-Impermeables-Zapatillas-Antideslizante/dp/B0BFPTSSQW/" target="_blank" class="amazon-card">
+                    <div class="img-container">
+                        <img src="images/izquierda-arriba.jpg" alt="Botas senderismo">
+                    </div>
+                    <div class="info-ad">
+                        <p class="titulo-prod" data-lang="prod_boots1">Botas Senderismo Impermeables</p>
+                        <div class="precio-ad">50,86€ <i class="fab fa-amazon"></i></div>
+                        <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
+                    </div>
+                </a>
+
+                <!-- Producto 2 -->
+                <a href="https://www.amazon.es/Columbia-Waterproof-Impermeables-Trekking-Senderismo/dp/B0CLW4PW32/" target="_blank" class="amazon-card">
+                    <div class="img-container">
+                        <img src="images/izquierda-abajo.jpg" alt="Botas Piel">
+                    </div>
+                    <div class="info-ad">
+                        <p class="titulo-prod" data-lang="prod_boots2">Botas de Montaña Piel - Pro</p>
+                        <div class="precio-ad">63,00€ <i class="fab fa-amazon"></i></div>
+                        <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
+                    </div>
+                </a>
+            </aside>
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <div class="contenedor-principal">
+
+                <nav class="navbar">
+                    <ul class="menu-header-footer">
+                        <li><a href="home_no_session.html" data-lang="nav_home">Inicio</a></li>
+                        <li><a href="packs.html" class="active" data-lang="nav_packs">Packs</a></li>
+                        <li><a href="#" data-lang="nav_forum">Foro</a></li>
+                        <li><a href="#" data-lang="nav_articles">Artículos</a></li>
+                        <li><a href="#" data-lang="nav_faq">Preguntas frecuentes</a></li>
+                        <li><a href="#" data-lang="nav_about">Nosotros</a></li>
+                    </ul>
+                    <div class="idioma-login">
+                        <!-- SELECTOR DE IDIOMA -->
+                        <select id="selector-idioma" class="selector-idioma">
+                            <option value="es">Español</option>
+                            <option value="en">English</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                        <a href="#" data-lang="nav_login">Iniciar Sesión</a>
+                    </div>
+                </nav>
+
+                <!-- HEADER PAQUETES -->
+                <div class="header-packs">
+                    <h1 data-lang="packs_title">Paquetes de viaje</h1>
+                    <p data-lang="packs_subtitle">Descubre nuestros mejores destinos al mejor precio</p>
+                </div>
+
+                <!-- FILTROS MÓVIL/TABLET (desplegable) -->
+                <div class="filtros-mobile">
+                    <button class="btn-toggle-filtros" id="btnToggleFiltros">
+                        <span data-lang="filters">Filtros</span>
+                        <span class="icono-flecha">▼</span>
+                    </button>
+                    <div class="panel-filtros-mobile" id="panelFiltrosMobile">
+                        <!-- Contenido de filtros -->
+                        <div class="grupo-filtro">
+                            <h4 data-lang="filter_country">País</h4>
+                            <label><input type="checkbox" value="hungria" data-filter="pais"> <span data-lang="country_hungary">Hungría</span></label>
+                            <label><input type="checkbox" value="italia" data-filter="pais"> <span data-lang="country_italy">Italia</span></label>
+                            <label><input type="checkbox" value="japon" data-filter="pais"> <span data-lang="country_japan">Japón</span></label>
+                            <label><input type="checkbox" value="peru" data-filter="pais"> <span data-lang="country_peru">Perú</span></label>
+                            <label><input type="checkbox" value="kenia" data-filter="pais"> <span data-lang="country_kenya">Kenia</span></label>
+                            <label><input type="checkbox" value="eeuu" data-filter="pais"> <span data-lang="country_usa">Estados Unidos</span></label>
+                            <label><input type="checkbox" value="marruecos" data-filter="pais"> <span data-lang="country_morocco">Marruecos</span></label>
+                            <label><input type="checkbox" value="nueva-zelanda" data-filter="pais"> <span data-lang="country_newzealand">Nueva Zelanda</span></label>
+                            <label><input type="checkbox" value="republica-checa" data-filter="pais"> <span data-lang="country_czechrepublic">República Checa</span></label>
+                        </div>
+
+                        <div class="grupo-filtro">
+                            <h4 data-lang="filter_stars">Estrellas Hotel</h4>
+                            <label><input type="checkbox" value="3" data-filter="estrellas"> 3★</label>
+                            <label><input type="checkbox" value="4" data-filter="estrellas"> 4★</label>
+                            <label><input type="checkbox" value="5" data-filter="estrellas"> 5★</label>
+                        </div>
+
+                        <div class="grupo-filtro">
+                            <h4 data-lang="filter_destination">Tipo de destino</h4>
+                            <label><input type="checkbox" value="ciudad" data-filter="tipo"> <span data-lang="dest_city">Ciudad</span></label>
+                            <label><input type="checkbox" value="playa" data-filter="tipo"> <span data-lang="dest_beach">Playa</span></label>
+                            <label><input type="checkbox" value="montana" data-filter="tipo"> <span data-lang="dest_mountain">Montaña</span></label>
+                            <label><input type="checkbox" value="aventura" data-filter="tipo"> <span data-lang="dest_adventure">Aventura</span></label>
+                        </div>
+
+                        <button class="btn-aplicar-filtros" id="btnAplicarFiltros" data-lang="apply_filters">Aplicar filtros</button>
+                        <button class="btn-limpiar-filtros" id="btnLimpiarFiltros" data-lang="clear_filters">Limpiar filtros</button>
+                    </div>
+                </div>
+
+                <!-- CONTENEDOR DE PAQUETES CON FILTROS -->
+                <div class="contenedor-packs-filtros">
+                    
+                    <!-- PANEL DE FILTROS LATERAL (Desktop) -->
+                    <aside class="panel-filtros-lateral">
+                        <h3 data-lang="filters">Filtros</h3>
+                        
+                        <div class="grupo-filtro">
+                            <h4 data-lang="filter_country">País</h4>
+                            <label><input type="checkbox" value="hungria" data-filter="pais"> <span data-lang="country_hungary">Hungría</span></label>
+                            <label><input type="checkbox" value="italia" data-filter="pais"> <span data-lang="country_italy">Italia</span></label>
+                            <label><input type="checkbox" value="japon" data-filter="pais"> <span data-lang="country_japan">Japón</span></label>
+                            <label><input type="checkbox" value="peru" data-filter="pais"> <span data-lang="country_peru">Perú</span></label>
+                            <label><input type="checkbox" value="kenia" data-filter="pais"> <span data-lang="country_kenya">Kenia</span></label>
+                            <label><input type="checkbox" value="eeuu" data-filter="pais"> <span data-lang="country_usa">Estados Unidos</span></label>
+                            <label><input type="checkbox" value="marruecos" data-filter="pais"> <span data-lang="country_morocco">Marruecos</span></label>
+                            <label><input type="checkbox" value="nueva-zelanda" data-filter="pais"> <span data-lang="country_newzealand">Nueva Zelanda</span></label>
+                            <label><input type="checkbox" value="republica-checa" data-filter="pais"> <span data-lang="country_czechrepublic">República Checa</span></label>
+                        </div>
+
+                        <div class="grupo-filtro">
+                            <h4 data-lang="filter_stars">Estrellas Hotel</h4>
+                            <label><input type="checkbox" value="3" data-filter="estrellas"> 3★</label>
+                            <label><input type="checkbox" value="4" data-filter="estrellas"> 4★</label>
+                            <label><input type="checkbox" value="5" data-filter="estrellas"> 5★</label>
+                        </div>
+
+                        <div class="grupo-filtro">
+                            <h4 data-lang="filter_destination">Tipo de destino</h4>
+                            <label><input type="checkbox" value="ciudad" data-filter="tipo"> <span data-lang="dest_city">Ciudad</span></label>
+                            <label><input type="checkbox" value="playa" data-filter="tipo"> <span data-lang="dest_beach">Playa</span></label>
+                            <label><input type="checkbox" value="montana" data-filter="tipo"> <span data-lang="dest_mountain">Montaña</span></label>
+                            <label><input type="checkbox" value="aventura" data-filter="tipo"> <span data-lang="dest_adventure">Aventura</span></label>
+                        </div>
+
+                        <button class="btn-limpiar-filtros" id="btnLimpiarFiltrosDesktop" data-lang="clear_filters">Limpiar filtros</button>
+                    </aside>
+
+                    <!-- LISTA DE PAQUETES -->
+                    <div class="lista-paquetes" id="listaPaquetes">
+                        
+                        <!-- Paquete 1 -->
+                        <article class="pack-item" data-pais="hungria" data-estrellas="4" data-tipo="ciudad">
+                            <div class="pack-imagen">
+                                <img src="images/budapest.jpg" alt="Budapest">
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 950€</span>
+                            </div>
+                            <div class="pack-info">
+                                <h3 data-lang="pack1_title">Europa Imperial (Viena y Budapest)</h3>
+                                <p class="pack-descripcion" data-lang="pack1_desc">Sumérgete en la grandeza del Imperio Austrohúngaro. Visita palacios imperiales, baños termales y disfruta de la mejor gastronomía centroeuropea.</p>
+                                <ul class="pack-detalles">
+                                    <li data-lang="pack1_li1">8 días / 7 noches</li>
+                                    <li data-lang="pack1_li2">Tren alta velocidad</li>
+                                    <li data-lang="pack1_li3">Hoteles 4* céntricos</li>
+                                    <li data-lang="pack1_li4">Guía en español</li>
+                                    <li data-lang="pack1_li5">Desayuno incluido</li>
+                                </ul>
+                                <button class="btn-ver-mas" data-lang="btn_see_more">Ver más detalles</button>
+                            </div>
+                        </article>
+
+                        <!-- Paquete 2 -->
+                        <article class="pack-item" data-pais="italia" data-estrellas="3" data-tipo="ciudad">
+                            <div class="pack-imagen">
+                                <img src="images/roma.jpg" alt="Roma">
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 1.120€</span>
+                            </div>
+                            <div class="pack-info">
+                                <h3 data-lang="pack2_title">Renacimiento Italiano (Florencia y Roma)</h3>
+                                <p class="pack-descripcion" data-lang="pack2_desc">Recorre la cuna del Renacimiento y el corazón de la antigua Roma. Arte, historia y la mejor cocina italiana te esperan.</p>
+                                <ul class="pack-detalles">
+                                    <li data-lang="pack2_li1">9 días / 8 noches</li>
+                                    <li data-lang="pack2_li2">Bed & Breakfast</li>
+                                    <li data-lang="pack2_li3">Museos Vaticanos</li>
+                                    <li data-lang="pack2_li4">Galería Uffizi</li>
+                                    <li data-lang="pack2_li5">Tours guiados</li>
+                                </ul>
+                                <button class="btn-ver-mas" data-lang="btn_see_more">Ver más detalles</button>
+                            </div>
+                        </article>
+
+                        <!-- Paquete 3 -->
+                        <article class="pack-item" data-pais="japon" data-estrellas="5" data-tipo="ciudad">
+                            <div class="pack-imagen">
+                                <img src="images/kioto.jpg" alt="Kioto">
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 2.400€</span>
+                            </div>
+                            <div class="pack-info">
+                                <h3 data-lang="pack3_title">Magia Asiática (Tokio y Kioto)</h3>
+                                <p class="pack-descripcion" data-lang="pack3_desc">Explora el contraste entre tradición y modernidad. Desde templos ancestrales hasta la vibrante vida urbana de Tokio.</p>
+                                <ul class="pack-detalles">
+                                    <li data-lang="pack3_li1">15 días / 14 noches</li>
+                                    <li data-lang="pack3_li2">Vuelos multidestino</li>
+                                    <li data-lang="pack3_li3">Ryokan en Kioto</li>
+                                    <li data-lang="pack3_li4">JR Pass incluido</li>
+                                    <li data-lang="pack3_li5">Ceremonia del té</li>
+                                </ul>
+                                <button class="btn-ver-mas" data-lang="btn_see_more">Ver más detalles</button>
+                            </div>
+                        </article>
+
+                        <!-- Paquete 4 -->
+                        <article class="pack-item" data-pais="peru" data-estrellas="3" data-tipo="montana aventura">
+                            <div class="pack-imagen">
+                                <img src="images/cuzco.jpg" alt="Cuzco">
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 1.850€</span>
+                            </div>
+                            <div class="pack-info">
+                                <h3 data-lang="pack4_title">Aventura Andina (Cuzco y Machu Picchu)</h3>
+                                <p class="pack-descripcion" data-lang="pack4_desc">Descubre las maravillas del Imperio Inca. Camina por el Camino Inca y maravíllate con Machu Picchu al amanecer.</p>
+                                <ul class="pack-detalles">
+                                    <li data-lang="pack4_li1">11 días / 10 noches</li>
+                                    <li data-lang="pack4_li2">Vuelos incluidos</li>
+                                    <li data-lang="pack4_li3">Machu Picchu</li>
+                                    <li data-lang="pack4_li4">Camino Inca 2 días</li>
+                                    <li data-lang="pack4_li5">Lago Titicaca</li>
+                                </ul>
+                                <button class="btn-ver-mas" data-lang="btn_see_more">Ver más detalles</button>
+                            </div>
+                        </article>
+
+                        <!-- Paquete 5 -->
+                        <article class="pack-item" data-pais="kenia" data-estrellas="4" data-tipo="aventura">
+                            <div class="pack-imagen">
+                                <img src="images/safari.webp" alt="Safari Kenia">
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 2.150€</span>
+                            </div>
+                            <div class="pack-info">
+                                <h3 data-lang="pack5_title">Safari en Kenia</h3>
+                                <p class="pack-descripcion" data-lang="pack5_desc">Vive la experiencia de ver los Big Five en su hábitat natural. Safari fotográfico en los mejores parques nacionales de África.</p>
+                                <ul class="pack-detalles">
+                                    <li data-lang="pack5_li1">10 días / 9 noches</li>
+                                    <li data-lang="pack5_li2">Rutas en 4x4 privado</li>
+                                    <li data-lang="pack5_li3">Camping de lujo</li>
+                                    <li data-lang="pack5_li4">Parque Masai Mara</li>
+                                    <li data-lang="pack5_li5">Visita poblado Masai</li>
+                                </ul>
+                                <button class="btn-ver-mas" data-lang="btn_see_more">Ver más detalles</button>
+                            </div>
+                        </article>
+
+                        <!-- Paquete 6 -->
+                        <article class="pack-item" data-pais="eeuu" data-estrellas="4" data-tipo="ciudad playa">
+                            <div class="pack-imagen">
+                                <img src="images/paris.jpg" alt="San Francisco">
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 1.680€</span>
+                            </div>
+                            <div class="pack-info">
+                                <h3 data-lang="pack6_title">Costa Oeste USA</h3>
+                                <p class="pack-descripcion" data-lang="pack6_desc">Descubre la costa del Pacífico desde San Francisco hasta Los Ángeles. Playas, montañas y ciudades icónicas.</p>
+                                <ul class="pack-detalles">
+                                    <li data-lang="pack6_li1">12 días / 11 noches</li>
+                                    <li data-lang="pack6_li2">Ruta en coche</li>
+                                    <li data-lang="pack6_li3">Hoteles 4* seleccionados</li>
+                                    <li data-lang="pack6_li4">Golden Gate</li>
+                                    <li data-lang="pack6_li5">Hollywood y Santa Mónica</li>
+                                </ul>
+                                <button class="btn-ver-mas" data-lang="btn_see_more">Ver más detalles</button>
+                            </div>
+                        </article>
+
+                        <!-- Paquete 7 -->
+                        <article class="pack-item" data-pais="marruecos" data-estrellas="3" data-tipo="ciudad">
+                            <div class="pack-imagen">
+                                <img src="images/chefchaouen.jpg" alt="Chefchaouen">
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 720€</span>
+                            </div>
+                            <div class="pack-info">
+                                <h3 data-lang="pack7_title">La Perla Azul (Basado en Chefchaouen)</h3>
+                                <p class="pack-descripcion" data-lang="pack7_desc">Descubre la ciudad más fotogénica de Marruecos. Pasea por sus calles azules y sumérgete en la auténtica cultura bereber.</p>
+                                <ul class="pack-detalles">
+                                    <li data-lang="pack7_li1">5 días / 4 noches</li>
+                                    <li data-lang="pack7_li2">Vuelos a Tánger</li>
+                                    <li data-lang="pack7_li3">Traslados privados</li>
+                                    <li data-lang="pack7_li4">Alojamiento (Riad tradicional)</li>
+                                    <li data-lang="pack7_li5">Desayunos incluidos</li>
+                                    <li data-lang="pack7_li6">Tour guiado por la medina azul</li>
+                                </ul>
+                                <button class="btn-ver-mas" data-lang="btn_see_more">Ver más detalles</button>
+                            </div>
+                        </article>
+
+                        <!-- Paquete 8 -->
+                        <article class="pack-item" data-pais="nueva-zelanda" data-estrellas="4" data-tipo="aventura montana">
+                            <div class="pack-imagen">
+                                <img src="images/queenstown.jpg" alt="Queenstown">
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 2.100€</span>
+                            </div>
+                            <div class="pack-info">
+                                <h3 data-lang="pack8_title">Aventura en las Antípodas (Queenstown)</h3>
+                                <p class="pack-descripcion" data-lang="pack8_desc">Vive la capital de la aventura de Nueva Zelanda. Paisajes épicos, deportes extremos y naturaleza en estado puro. Sin vuelo internacional.</p>
+                                <ul class="pack-detalles">
+                                    <li data-lang="pack8_li1">8 días / 7 noches</li>
+                                    <li data-lang="pack8_li2">Apartamento con vistas al lago</li>
+                                    <li data-lang="pack8_li3">Salto Bungee (Kawarau Bridge)</li>
+                                    <li data-lang="pack8_li4">Crucero por Milford Sound</li>
+                                    <li data-lang="pack8_li5">Alquiler de coche (SUV)</li>
+                                    <li data-lang="pack8_li6">Sin vuelo internacional</li>
+                                </ul>
+                                <button class="btn-ver-mas" data-lang="btn_see_more">Ver más detalles</button>
+                            </div>
+                        </article>
+
+                        <!-- Paquete 9 -->
+                        <article class="pack-item" data-pais="republica-checa" data-estrellas="5" data-tipo="ciudad">
+                            <div class="pack-imagen">
+                                <img src="images/praga.webp" alt="Praga">
+                                <span class="etiqueta-precio"><span data-lang="from">Desde</span> 1.680€</span>
+                            </div>
+                            <div class="pack-info">
+                                <h3 data-lang="pack9_title">Cuentos de Bohemia (Praga)</h3>
+                                <p class="pack-descripcion" data-lang="pack9_desc">Sumérgete en la magia de Praga, la ciudad de las cien torres. Arquitectura gótica, cerveza bohemia y un encanto medieval único.</p>
+                                <ul class="pack-detalles">
+                                    <li data-lang="pack9_li1">6 días / 5 noches</li>
+                                    <li data-lang="pack9_li2">Vuelos directos</li>
+                                    <li data-lang="pack9_li3">Hotel céntrico 5*</li>
+                                    <li data-lang="pack9_li4">Paseo en barco por el Moldava</li>
+                                    <li data-lang="pack9_li5">Entrada al Castillo de Praga</li>
+                                    <li data-lang="pack9_li6">Tour de la Ciudad Vieja</li>
+                                </ul>
+                                <button class="btn-ver-mas" data-lang="btn_see_more">Ver más detalles</button>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <footer>
+                    <div class="footer-top">
+                        <div class="col-footer">
+                            <h4 data-lang="footer_title">Mochileros por el mundo</h4>
+                            <div class="bloque-siguenos">
+                                <h5 data-lang="follow_us">SÍGUENOS</h5>
+                                <div class="iconos-sociales">
+                                    <a href="https://www.instagram.com/" target="_blank" title="Instagram"><img src="images/instagram_r.png" alt="IG"></a>
+                                    <a href="https://www.facebook.com/?locale=es_ES%2F" target="_blank" title="Facebook"><img src="images/facebook_r.png" alt="FB"></a>
+                                    <a href="https://www.tiktok.com/es" target="_blank" title="TikTok"><img src="images/tiktok_r.png" alt="TK"></a>
+                                    <a href="https://www.youtube.com/" target="_blank" title="YouTube"><img src="images/youtube_r.png" alt="YT"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-footer">
+                            <h4 data-lang="legal">Legal</h4>
+                            <p data-lang="terms">Términos y condiciones</p>
+                            <p data-lang="info">Información</p>
+                            <p data-lang="page">Página</p>
+                        </div>
+                        <div class="col-footer">
+                            <h4 data-lang="help">Ayuda</h4>
+                            <p data-lang="faq_short">Preguntas frecuentes</p>
+                            <p data-lang="problems">Problemas</p>
+                            <p data-lang="incidents">Incidencias web</p>
+                        </div>
+                        <div class="col-footer">
+                            <h4 data-lang="contact">Contacto</h4>
+                            <p data-lang="doubts">Dudas</p>
+                            <p data-lang="phone">Número telefónico</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom-pago">
+                        <h5 data-lang="secure_pay">PAGO SEGURO</h5>
+                        <div class="iconos-pago">
+                            <div class="tarjeta-icono"><img src="images/visa.png" alt="Visa"></div>
+                            <div class="tarjeta-icono"><img src="images/matercard.png" alt="Mastercard"></div>
+                            <div class="tarjeta-icono"><img src="images/paypal.png" alt="Paypal"></div>
+                        </div>
+                    </div>
+                </footer>
+
+            </div> 
+
+            <!-- PUBLICIDAD DERECHA -->
+            <aside class="zona-publicidad publicidad-derecha">
+                <div class="titulo-ad" data-lang="ad_top">Top Ventas</div>
+
+                <a href="https://www.amazon.es/PICSIL-Impermeable-Capacidad-Crosstraining-Senderismo/dp/B0DV9GKVM4" target="_blank" class="amazon-card">
+                    <div class="img-container">
+                        <img src="images/derecha-arriba.jpg" alt="Mochila Táctica">
+                    </div>
+                    <div class="info-ad">
+                        <p class="titulo-prod" data-lang="prod_backpack">Mochila Táctica 40L</p>
+                        <div class="precio-ad">129,95€ <i class="fab fa-amazon"></i></div>
+                        <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
+                    </div>
+                </a>
+
+                <a href="https://www.amazon.es/Night-Cat-Tienda-Persona-Ultraligero/dp/B0DYD4D2XB" target="_blank" class="amazon-card">
+                    <div class="img-container">
+                        <img src="images/derecha-abajo.jpg" alt="Tienda Campaña">
+                    </div>
+                    <div class="info-ad">
+                        <p class="titulo-prod" data-lang="prod_tent">Tienda Campaña Ultraligera</p>
+                        <div class="precio-ad">152,99€ <i class="fab fa-amazon"></i></div>
+                        <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
+                    </div>
+                </a>
+            </aside>
+
+        </div> 
+        
+        <script type="text/javascript" src="scripts/main.js"></script>
+        <script type="text/javascript" src="scripts/packs.js"></script>
+
+    </body>
+</html>
