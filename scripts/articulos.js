@@ -24,7 +24,8 @@ async function cargarArticulosGrid() {
                     <div class="contenido-art">
                         <h3 data-lang="${art.lang_id_titulo}">${art.titulo}</h3>
                         <p data-lang="${art.lang_id_desc}">${art.descripcion}</p>
-                        <a href="#">Leer más &rarr;</a>
+                        
+                        <a href="articulo_detalle.html?id=${art.id}">Leer más &rarr;</a>
                     </div>
                 </article>
             `;

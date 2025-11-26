@@ -26,15 +26,17 @@ async function carrusel() {
         let htmlContent = "";
         articulosCarrusel.forEach(art => {
             htmlContent += `
-                <div class="tarjeta-articulo">
-                    <div class="articulo-img">
-                        <img src="${art.imagen}" alt="${art.titulo}">
+                <a href="articulo_detalle.html?id=${art.id}" style="text-decoration:none">
+                    <div class="tarjeta-articulo">
+                        <div class="articulo-img">
+                            <img src="${art.imagen}" alt="${art.titulo}">
+                        </div>
+                        <div class="articulo-info">
+                            <h4 data-lang="${art.lang_id_titulo}">${art.titulo}</h4>
+                            <p data-lang="${art.lang_id_desc}">${art.descripcion}</p>
+                        </div>
                     </div>
-                    <div class="articulo-info">
-                        <h4 data-lang="${art.lang_id_titulo}">${art.titulo}</h4>
-                        <p data-lang="${art.lang_id_desc}">${art.descripcion}</p>
-                    </div>
-                </div>
+                </a>
             `;
         });
         
