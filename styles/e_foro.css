@@ -1,0 +1,233 @@
+/* ============================================
+   ESTILOS ESPECÍFICOS PARA EL FORO
+   ============================================ */
+
+.header-foro {
+    background: linear-gradient(135deg, #0077B6 0%, #023E8A 100%);
+    padding: 60px 50px;
+    text-align: center;
+    color: white;
+}
+
+.header-foro h1 {
+    font-size: 2.5rem;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.header-foro p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+.contenedor-foro-lista {
+    background: white;
+    padding: 30px;
+    border-radius: 0 0 12px 12px;
+}
+
+.barra-acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #F0F0F0;
+    padding-bottom: 20px;
+}
+
+.btn-nuevo-tema {
+    background-color: #FFB703;
+    color: #003049;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(255, 183, 3, 0.3);
+}
+
+.btn-nuevo-tema:hover {
+    transform: translateY(-2px);
+    background-color: #fb8500;
+}
+
+/* --- LISTA DE TEMAS --- */
+.tema-item {
+    /* Quitamos display:flex global para poder meter div de respuestas debajo */
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden; /* Para contener los hijos */
+}
+
+/* Contenedor de la cabecera visible */
+.tema-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.tema-item:hover {
+    border-color: #0077B6;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.tema-info-principal {
+    flex: 1;
+}
+
+.tema-categoria {
+    display: inline-block;
+    background-color: #E1F5FE;
+    color: #0077B6;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.tema-titulo {
+    font-size: 1.1rem;
+    color: #2C3E50;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.tema-item:hover .tema-titulo {
+    color: #0077B6;
+}
+
+.tema-meta {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.tema-autor {
+    color: #FFB703;
+    font-weight: 600;
+}
+
+.tema-stats {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    min-width: 150px;
+    justify-content: flex-end;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-numero {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2C3E50;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #999;
+}
+
+/* --- RESPUESTAS DESPLEGABLES --- */
+.contenedor-respuestas {
+    display: none; /* Oculto por defecto */
+    background-color: #F8F9FA;
+    border-top: 1px solid #E0E0E0;
+    padding: 20px 30px;
+}
+
+.tema-item.open .contenedor-respuestas {
+    display: block; /* Visible al abrir */
+}
+
+.tema-item.open {
+    border-color: #0077B6;
+    background-color: #FAFCFF;
+}
+
+.mensaje-foro {
+    background: white;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.mensaje-foro::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15px;
+    bottom: 15px;
+    width: 4px;
+    background-color: #FFB703;
+    border-radius: 0 4px 4px 0;
+}
+
+.mensaje-usuario {
+    font-weight: 700;
+    color: #0077B6;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.mensaje-texto {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.sin-respuestas {
+    font-style: italic;
+    color: #888;
+    text-align: center;
+    padding: 10px;
+}
+
+/* --- MENÚ ACTIVO --- */
+.navbar .active {
+    color: #0077B6 !important;
+    font-weight: 700;
+    position: relative;
+}
+
+.navbar .active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: #FFB703;
+    border-radius: 2px;
+}
+
+@media (max-width: 600px) {
+    .tema-cabecera {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tema-stats {
+        margin-top: 15px;
+        width: 100%;
+        justify-content: flex-start;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+    }
+}

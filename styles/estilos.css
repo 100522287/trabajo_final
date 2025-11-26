@@ -416,11 +416,10 @@ body.body-mochileros {
 }
 .track-carrusel::-webkit-scrollbar { display: none; }
 
-/* AQUÍ ESTÁ EL CAMBIO PARA HACERLAS MÁS ANCHAS */
 .tarjeta-articulo {
     /* En móviles */
-    flex: 0 0 300px; 
-    width: 300px;
+    flex: 0 0 250px; 
+    width: 250px;
     
     border: none;
     border-radius: 12px;
@@ -430,10 +429,10 @@ body.body-mochileros {
     transition: transform 0.3s;
 }
 
-/* En PC (Pantallas grandes) las hacemos AÚN MÁS ANCHAS */
+/* En PC (Pantallas grandes) las hacemos MÁS ANCHAS */
 @media only screen and (min-width: 768px) {
     .tarjeta-articulo {
-        flex: 0 0 300px; /* 400px de ancho fijo: se verán grandes */
+        flex: 0 0 300px; /* 300px de ancho fijo: se verán grandes */
         width: 300px;
     }
     
