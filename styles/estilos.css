@@ -402,11 +402,12 @@ body.body-mochileros {
     align-items: center;
     gap: 20px;
     position: relative;
+    padding: 0 20px; /* Un poco de aire a los lados */
 }
 
 .track-carrusel {
     display: flex;
-    gap: 30px;
+    gap: 30px; /* Espacio entre tarjetas */
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 20px 5px;
@@ -415,8 +416,12 @@ body.body-mochileros {
 }
 .track-carrusel::-webkit-scrollbar { display: none; }
 
+/* AQUÍ ESTÁ EL CAMBIO PARA HACERLAS MÁS ANCHAS */
 .tarjeta-articulo {
-    flex: 0 0 100%;
+    /* En móviles */
+    flex: 0 0 300px; 
+    width: 300px;
+    
     border: none;
     border-radius: 12px;
     overflow: hidden;
@@ -425,12 +430,25 @@ body.body-mochileros {
     transition: transform 0.3s;
 }
 
+/* En PC (Pantallas grandes) las hacemos AÚN MÁS ANCHAS */
+@media only screen and (min-width: 768px) {
+    .tarjeta-articulo {
+        flex: 0 0 300px; /* 400px de ancho fijo: se verán grandes */
+        width: 300px;
+    }
+    
+    /* Ajustamos la altura de la imagen para que acompañe al ancho */
+    .articulo-img {
+        height: 250px; 
+    }
+}
+
 .tarjeta-articulo:hover {
     transform: translateY(-5px);
 }
 
 .articulo-img {
-    height: 200px;
+    height: 200px; /* Altura base para móvil */
     background-color: #B3E5FC;
     overflow: hidden;
 }
@@ -449,7 +467,7 @@ body.body-mochileros {
 
 .articulo-info h4 {
     color: #023E8A;
-    font-size: 1.15rem;
+    font-size: 1.3rem; /* Letra del título un poco más grande */
     margin-bottom: 10px;
     font-weight: 700;
 }
