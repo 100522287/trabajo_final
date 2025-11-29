@@ -2,14 +2,22 @@ document.addEventListener('DOMContentLoaded', () => {
     cargarForo();
 });
 
-async function cargarForo() {
+function cargarForo() {
     const contenedor = document.getElementById('lista-temas-dinamica');
     
+    // Verificamos si existe el contenedor
     if (!contenedor) return;
 
+    // Verificamos si los datos incrustados existen
+    if (!window.datosForo) {
+        console.error("No se encontraron los datos del foro (window.datosForo)");
+        contenedor.innerHTML = "<p>Error: No hay datos disponibles.</p>";
+        return;
+    }
+
     try {
-        const respuesta = await fetch('data/foro.json');
-        const temas = await respuesta.json();
+        // YA NO HACEMOS FETCH, USAMOS LA VARIABLE GLOBAL
+        const temas = window.datosForo;
 
         let htmlContent = '';
         
@@ -30,7 +38,7 @@ async function cargarForo() {
                 htmlRespuestas = '<div class="sin-respuestas">No hay respuestas todavía. ¡Sé el primero!</div>';
             }
 
-            // 2. Construimos la tarjeta completa (Cabecera + Respuestas ocultas)
+            // 2. Construimos la tarjeta completa
             htmlContent += `
                 <div class="tema-item">
                     
@@ -68,17 +76,15 @@ async function cargarForo() {
         const items = document.querySelectorAll('.tema-item');
         
         items.forEach(item => {
-            // Solo al hacer click en la cabecera
             const cabecera = item.querySelector('.tema-cabecera');
             
             cabecera.addEventListener('click', () => {
-                // Toggle de la clase 'open'
                 item.classList.toggle('open');
             });
         });
 
     } catch (error) {
-        console.error("Error cargando foro:", error);
-        contenedor.innerHTML = "<p>Error al cargar los temas del foro.</p>";
+        console.error("Error procesando foro:", error);
+        contenedor.innerHTML = "<p>Error al mostrar los temas.</p>";
     }
 }

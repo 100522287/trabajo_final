@@ -38,8 +38,10 @@
                     <ul class="menu-header-footer">
                         <li><a href="home_no_session.html">Inicio</a></li>
                         <li><a href="packs.html">Packs</a></li>
-                        <li><a href="#">Foro</a></li> 
+                        <li><a href="foro.html">Foro</a></li> 
+                        
                         <li><a href="articulos.html" class="active">Artículos</a></li>
+                        
                         <li><a href="faq.html">Preguntas frecuentes</a></li>
                         <li><a href="#">Nosotros</a></li> 
                     </ul>
@@ -60,8 +62,7 @@
 
                         <h1 id="detalle-titulo" class="detalle-titulo">Cargando...</h1>
 
-                        <div id="detalle-cuerpo" class="detalle-cuerpo">
-                            </div>
+                        <div id="detalle-cuerpo" class="detalle-cuerpo"></div>
 
                         <a href="articulos.html" class="btn-volver">&larr; Volver a Artículos</a>
                     </div>
@@ -99,6 +100,15 @@
                             <p>+34 91 123 45 67</p>
                         </div>
                     </div>
+                    
+                    <div class="footer-bottom-pago">
+                        <h5>PAGO SEGURO</h5>
+                        <div class="iconos-pago">
+                            <div class="tarjeta-icono"><img src="images/visa.png" alt="Visa"></div>
+                            <div class="tarjeta-icono"><img src="images/matercard.png" alt="Mastercard"></div>
+                            <div class="tarjeta-icono"><img src="images/paypal.png" alt="Paypal"></div>
+                        </div>
+                    </div>
                 </footer>
             </div>
 
@@ -122,6 +132,92 @@
                 </a>
             </aside>
         </div> 
+        
+        <script>
+            window.datosArticulos = [
+                {
+                    "id": 1,
+                    "titulo": "Copenhague en bicicleta",
+                    "descripcion": "Descubre la capital danesa sobre dos ruedas.",
+                    "texto_completo": "Copenhague es conocida mundialmente como la ciudad de las bicicletas. Con más de 390 kilómetros de carriles bici, es el paraíso para los amantes de las dos ruedas. <br><br>Te recomendamos alquilar una bicicleta eléctrica para recorrer el centro histórico, pasando por el colorido puerto de Nyhavn y llegando hasta la estatua de la Sirenita. No olvides visitar el barrio libre de Christiania y disfrutar de la gastronomía nórdica en el mercado de Torvehallerne.",
+                    "imagen": "images/copenhagen.jpg",
+                    "lang_id_titulo": "art1_title",
+                    "lang_id_desc": "art1_desc"
+                },
+                {
+                    "id": 2,
+                    "titulo": "48h en Chefchaouen",
+                    "descripcion": "Cómo encontrar los mejores miradores.",
+                    "texto_completo": "Chefchaouen, la perla azul de Marruecos, es un laberinto de callejuelas pintadas de infinitos tonos de azul. Fundada en 1471, esta ciudad en las montañas del Rif ofrece una atmósfera tranquila y mágica.<br><br>La mejor hora para fotografiar sus calles es al amanecer, cuando la luz es suave y las calles están vacías. Sube a la Mezquita Española al atardecer para tener la mejor panorámica de la ciudad iluminada.",
+                    "imagen": "images/chefchaouen.jpg",
+                    "lang_id_titulo": "art2_title",
+                    "lang_id_desc": "art2_desc"
+                },
+                {
+                    "id": 3,
+                    "titulo": "El arte de tapear en Sevilla",
+                    "descripcion": "Del Alcázar a los patios.",
+                    "texto_completo": "Sevilla no se visita, se vive. Y gran parte de esa vida ocurre en sus bares de tapas. Desde el barrio de Santa Cruz hasta Triana, la cultura del tapeo es religión.<br><br>No puedes irte sin probar las espinacas con garbanzos, el solomillo al whisky o un buen gazpacho. Acompaña tu ruta con un espectáculo de flamenco auténtico en algún tablao íntimo del centro.",
+                    "imagen": "images/sevilla.jpg",
+                    "lang_id_titulo": "art3_title",
+                    "lang_id_desc": "art3_desc"
+                },
+                {
+                    "id": 4,
+                    "titulo": "Escapada a París",
+                    "descripcion": "Ruta alternativa por los barrios bohemios.",
+                    "texto_completo": "París es mucho más que la Torre Eiffel y el Louvre. Te proponemos una ruta por el Canal Saint-Martin, donde los parisinos hacen picnic al atardecer, y por las calles empedradas de Montmartre lejos de la zona turística.<br><br>Descubre pequeñas librerías, cafés con encanto y el arte callejero que decora el barrio de Belleville.",
+                    "imagen": "images/paris.jpg",
+                    "lang_id_titulo": "art4_title",
+                    "lang_id_desc": "art4_desc"
+                },
+                {
+                    "id": 5,
+                    "titulo": "Japón para principiantes",
+                    "descripcion": "Todo lo que necesitas saber antes de tu primer viaje.",
+                    "texto_completo": "Japón es un país de contrastes fascinantes. Para tu primer viaje, la ruta dorada (Tokio, Kioto y Osaka) es imprescindible. Recuerda comprar el JR Pass antes de viajar para ahorrar en los trenes bala.<br><br>No temas a la barrera del idioma; la hospitalidad japonesa (Omotenashi) te hará sentir en casa. Prueba el sushi de cinta transportadora y duerme al menos una noche en un Ryokan tradicional.",
+                    "imagen": "images/kioto.jpg",
+                    "lang_id_titulo": "art5_title",
+                    "lang_id_desc": "art5_desc"
+                },
+                {
+                    "id": 6,
+                    "titulo": "Bali: Templos y Arrozales",
+                    "descripcion": "Una ruta espiritual y fotográfica.",
+                    "texto_completo": "Bali, la isla de los dioses, ofrece paisajes que cortan la respiración. Desde los arrozales escalonados de Tegalalang hasta los templos sagrados como Tanah Lot.<br><br>Alquila una moto para moverte con libertad y descubre las cascadas escondidas en el norte de la isla. La espiritualidad se respira en cada rincón con las ofrendas diarias de flores e incienso.",
+                    "imagen": "images/safari.webp",
+                    "lang_id_titulo": "art6_title",
+                    "lang_id_desc": "art6_desc"
+                },
+                {
+                    "id": 7,
+                    "titulo": "Nueva York en 5 días",
+                    "descripcion": "La guía definitiva para no perderte nada.",
+                    "texto_completo": "Nueva York nunca duerme y siempre tiene algo nuevo. En 5 días puedes ver lo esencial: Central Park, Times Square, el puente de Brooklyn y la Estatua de la Libertad (aunque sea desde el ferry gratuito).<br><br>Para comer barato, los carritos de Halal y las porciones de pizza de 1 dólar son tus mejores aliados. No olvides subir a un rascacielos como el Top of the Rock para ver el atardecer.",
+                    "imagen": "images/budapest.jpg",
+                    "lang_id_titulo": "art7_title",
+                    "lang_id_desc": "art7_desc"
+                },
+                {
+                    "id": 8,
+                    "titulo": "Patagonia: Fin del Mundo",
+                    "descripcion": "Senderismo extremo y glaciares.",
+                    "texto_completo": "La Patagonia es tierra de aventureros. El Glaciar Perito Moreno te dejará sin palabras con sus rupturas de hielo estruendosas. Si te gusta el trekking, el circuito W en Torres del Paine es una experiencia obligatoria.<br><br>Prepárate para las cuatro estaciones en un mismo día; el clima aquí es impredecible pero parte de la magia del fin del mundo.",
+                    "imagen": "images/cuzco.jpg",
+                    "lang_id_titulo": "art8_title",
+                    "lang_id_desc": "art8_desc"
+                },
+                {
+                    "id": 9,
+                    "titulo": "Praga Mágica",
+                    "descripcion": "Leyendas, castillos y cerveza artesanal.",
+                    "texto_completo": "Praga parece sacada de un cuento de hadas. El Puente de Carlos al amanecer, el Castillo de Praga dominando la colina y el Reloj Astronómico son paradas obligatorias.<br><br>Pero Praga también es cerveza. Visita una taberna local para probar la pilsner más fresca del mundo y descubre las leyendas de alquimistas que envuelven el callejón del oro.",
+                    "imagen": "images/roma.jpg",
+                    "lang_id_titulo": "art9_title",
+                    "lang_id_desc": "art9_desc"
+                }
+            ];
+        </script>
         
         <script type="text/javascript" src="scripts/main.js"></script>
         <script type="text/javascript" src="scripts/articulo_detalle.js"></script>

@@ -2,21 +2,25 @@ document.addEventListener('DOMContentLoaded', () => {
     cargarArticulosGrid();
 });
 
-async function cargarArticulosGrid() {
+function cargarArticulosGrid() {
     const contenedor = document.getElementById('contenedor-grid-articulos');
     
-    // Verificación: Si no estamos en la página correcta, salir
+    // Verificación de seguridad
     if (!contenedor) return;
 
+    // Verificamos si los datos existen en la variable global
+    if (!window.datosArticulos) {
+        console.error("No se encontraron los datos (window.datosArticulos)");
+        contenedor.innerHTML = "<p>Error: Datos no encontrados.</p>";
+        return;
+    }
+
     try {
-        // Cargar datos
-        const respuesta = await fetch('data/articulos.json');
-        if (!respuesta.ok) throw new Error('Error al cargar JSON');
+        // USAMOS LA VARIABLE GLOBAL DIRECTAMENTE
+        const articulos = window.datosArticulos;
         
-        const articulos = await respuesta.json();
         let htmlContent = '';
 
-        // Generar HTML
         articulos.forEach(art => {
             htmlContent += `
                 <article class="articulo-completo">
@@ -24,18 +28,16 @@ async function cargarArticulosGrid() {
                     <div class="contenido-art">
                         <h3 data-lang="${art.lang_id_titulo}">${art.titulo}</h3>
                         <p data-lang="${art.lang_id_desc}">${art.descripcion}</p>
-                        
                         <a href="articulo_detalle.html?id=${art.id}">Leer más &rarr;</a>
                     </div>
                 </article>
             `;
         });
 
-        // Pintar en pantalla
         contenedor.innerHTML = htmlContent;
 
     } catch (error) {
-        console.error("Error JS:", error);
-        contenedor.innerHTML = "<p>No se pudieron cargar los artículos.</p>";
+        console.error("Error cargando artículos:", error);
+        contenedor.innerHTML = "<p>Cargando artículos...</p>";
     }
 }
