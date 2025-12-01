@@ -19,7 +19,7 @@ function actualizarHeaderSesion() {
 
         if (datosUsuario) {
             // Imagen por defecto si no tiene una
-            const imagenPerfil = datosUsuario.avatar || "images/tiktok_r.png";
+            const imagenPerfil = datosUsuario.avatar || "images/foto_perfil.png";
 
             // Reemplazar el botón "Iniciar Sesión" por la foto y nombre
             panelUsuario.innerHTML = `
@@ -50,10 +50,6 @@ function actualizarHero() {
             // Cambiamos el texto
             heroTitle.textContent = "¡Hola de nuevo, " + datosUsuario.nombre + "!";
             heroDesc.textContent = "El mundo sigue esperándote. ¿Cuál es tu próximo destino?";
-
-            if (heroBtn) {
-                heroBtn.textContent = "Ver mis ofertas";
-            }
         }
     }
 }
