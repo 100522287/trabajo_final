@@ -142,55 +142,57 @@ body.body-mochileros {
     justify-content: space-between;
     align-items: center;
     background-color: #FFFFFF;
-    padding: 20px 50px;
+    padding: 10px 50px;
     border-bottom: 1px solid #ECF0F1;
 }
 
 .menu-header-footer {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 50px;
     padding: 0;
     margin: 0;
     align-items: center;
 }
 
-.menu-header-footer a,
-.idioma-login a {
+.menu-header-footer li a:not(.logo-nav) {
     text-decoration: none;
     color: #2C3E50;
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-weight: 700; /* Un poco más negrita para que se lea bien */
+    font-size: 0.85rem; /* Tamaño ajustado */
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: color 0.3s;
     position: relative;
+    
+    /* MAGIA PARA DOS LÍNEAS: */
+    display: inline-block;
+    text-align: center;     /* Centra el texto una vez que salta de línea */
+    width: min-content;     /* Fuerza el salto de línea en los espacios */
+    line-height: 1.2;       /* Espacio entre las dos líneas de texto */
 }
 
-.menu-header-footer a:hover {
+/* El hover del texto (color azul) */
+.menu-header-footer li a:not(.logo-nav):hover {
     color: #0077B6;
 }
 
-.menu-header-footer a:after {
+/* La línea amarilla debajo al pasar el ratón */
+.menu-header-footer li a:not(.logo-nav):after {
     content: '';
     position: absolute;
     width: 0;
     height: 3px;
     bottom: -5px;
-    left: 0;
+    left: 50%; /* Empezar desde el centro */
+    transform: translateX(-50%); /* Centrar la línea */
     background-color: #FFB703;
     transition: width 0.3s;
     border-radius: 2px;
 }
 
-.menu-header-footer a:hover:after {
+.menu-header-footer li a:not(.logo-nav):hover:after {
     width: 100%;
-}
-
-.idioma-login {
-    display: flex;
-    gap: 10px;
-    align-items: center;
 }
 
 .selector-idioma {

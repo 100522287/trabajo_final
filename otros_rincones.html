@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo_principal.png" type="image/webp">
-    <title>Foro - Mochileros por el mundo</title>
+    <title>Otros Rincones - Mochileros por el mundo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="styles/estilos.css">
-    <link rel="stylesheet" type="text/css" href="styles/e_foro.css">
+    <link rel="stylesheet" type="text/css" href="styles/e_otros_rincones.css">
 </head>
 
-<body class="body-mochileros">
     <div class="layout-global">
+
         <aside class="zona-publicidad publicidad-izquierda">
             <div class="titulo-ad" data-lang="ad_recommend">Te recomendamos</div>
 
@@ -40,11 +42,12 @@
         </aside>
 
         <div class="contenedor-principal">
+
             <nav class="navbar">
                 <ul class="menu-header-footer">
                     <li><a href="home_no_session.html" class="logo-nav"><img src="images/logo_principal.png" alt="Mochileros Inicio"></a></li>
                     <li><a href="packs.html">Packs</a></li>
-                    <li><a href="foro.html" class="active">Foro</a></li>
+                    <li><a href="foro.html">Foro</a></li>
                     <li><a href="articulos.html">Artículos</a></li>
                     <li><a href="faq.html">Preguntas frecuentes</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
@@ -60,27 +63,66 @@
                 </div>
             </nav>
 
-            <header class="header-foro">
-                <h1>Foro de Viajeros</h1>
-                <p>Comparte experiencias, busca compañeros y resuelve dudas.</p>
+            <header class="header-rincones">
+                <h1>Otros Rincones del Mundo</h1>
+                <p>¡Tu opinión importa!</p>
+                <p>Vota qué pack te gustaría que volviese a estar disponible</p>
             </header>
 
-            <main class="contenedor-foro-lista">
-                <div class="barra-acciones">
-                    <h2 style="margin:0; color:#0077B6;">Últimos Temas</h2>
-                    <button id="btn-crear-tema" class="btn-nuevo-tema">+ Nuevo Tema</button>
-                </div>
-                <div id="lista-temas-dinamica"></div>
+            <main style="background: #f4f4f4; padding: 30px;">
+                <div class="contenedor-grid-rincones" id="contenedor-rincones-dinamico">
+                    </div>
             </main>
 
             <footer>
                 <div class="footer-top">
                     <div class="col-footer">
-                        <h4>Mochileros</h4>
+                        <h4 data-lang="footer_title">Mochileros por el mundo</h4>
+                        <div class="bloque-siguenos">
+                            <h5 data-lang="follow_us">SÍGUENOS</h5>
+                            <div class="iconos-sociales">
+                                <a href="https://www.instagram.com/" target="_blank" title="Instagram"><img
+                                        src="images/instagram_r.png" alt="IG"></a>
+                                <a href="https://www.facebook.com/" target="_blank" title="Facebook"><img
+                                        src="images/facebook_r.png" alt="FB"></a>
+                                <a href="https://www.tiktok.com/" target="_blank" title="TikTok"><img
+                                        src="images/tiktok_r.png" alt="TK"></a>
+                                <a href="https://www.youtube.com/" target="_blank" title="YouTube"><img
+                                        src="images/youtube_r.png" alt="YT"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-footer">
+                        <h4 data-lang="legal">Legal</h4>
+                        <p data-lang="terms">Términos y condiciones</p>
+                        <p data-lang="info">Información</p>
+                        <p data-lang="page">Política de privacidad</p>
+                    </div>
+                    <div class="col-footer">
+                        <h4 data-lang="help">Ayuda</h4>
+                        <p data-lang="faq_short">Preguntas frecuentes</p>
+                        <p data-lang="problems">Problemas</p>
+                        <p data-lang="incidents">Incidencias web</p>
+                    </div>
+                    <div class="col-footer">
+                        <h4 data-lang="contact">Contacto</h4>
+                        <p data-lang="doubts">Dudas</p>
+                        <p data-lang="phone">Número telefónico</p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom-pago">
+                    <h5 data-lang="secure_pay">PAGO SEGURO</h5>
+                    <div class="iconos-pago">
+                        <div class="tarjeta-icono"><img src="images/visa.png" alt="Visa"></div>
+                        <div class="tarjeta-icono"><img src="images/matercard.png" alt="Mastercard"></div>
+                        <div class="tarjeta-icono"><img src="images/paypal.png" alt="Paypal"></div>
                     </div>
                 </div>
             </footer>
+
         </div>
+
         <aside class="zona-publicidad publicidad-derecha">
             <div class="titulo-ad" data-lang="ad_top">Top Ventas</div>
 
@@ -108,9 +150,11 @@
                 </div>
             </a>
         </aside>
+
     </div>
+
     <script type="text/javascript" src="scripts/main.js"></script>
-    <script type="text/javascript" src="scripts/foro.js"></script>
+    <script type="text/javascript" src="scripts/otros_rincones.js"></script>
 </body>
 
 </html>
