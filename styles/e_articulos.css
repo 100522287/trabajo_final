@@ -1,41 +1,36 @@
 /* ============================================
-   ESTILOS ESPECÍFICOS PARA LA PÁGINA DE ARTÍCULOS
+   ESTILOS PARA LA PÁGINA DE ARTÍCULOS (GRID + DETALLE)
    ============================================ */
 
-/* --- HEADER ARTÍCULOS (Estilo IDÉNTICO a Packs) --- */
+/* --- HEADER ARTÍCULOS --- */
 .header-articulos {
     background: linear-gradient(135deg, #0077B6 0%, #023E8A 100%);
     padding: 60px 50px;
     text-align: center;
     color: white;
-    margin-bottom: 0; 
 }
 
 .header-articulos h1 {
     font-size: 2.5rem;
     margin: 0 0 15px 0;
     font-weight: 700;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .header-articulos p {
     font-size: 1.2rem;
     opacity: 0.95;
-    margin: 0 auto;
     max-width: 800px;
+    margin: 0 auto;
 }
 
-/* --- REJILLA DE ARTÍCULOS --- */
+/* --- GRID DE ARTÍCULOS --- */
 .grid-articulos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     padding: 40px 50px;
-    background-color: #FFFFFF;
 }
 
-/* --- TARJETA DE ARTÍCULO INDIVIDUAL --- */
 .articulo-completo {
     background: white;
     border-radius: 12px;
@@ -57,25 +52,19 @@
     width: 100%;
     height: 220px;
     object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.articulo-completo:hover img {
-    transform: scale(1.05);
 }
 
 .contenido-art {
     padding: 25px;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 .contenido-art h3 {
     margin-top: 0;
     color: #0077B6;
     font-size: 1.4rem;
-    line-height: 1.3;
     margin-bottom: 15px;
     font-weight: 700;
 }
@@ -88,62 +77,98 @@
     flex-grow: 1;
 }
 
-.contenido-art a {
+.btn-leer-mas {
     color: #FFB703;
-    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
     font-weight: 700;
     font-size: 0.9rem;
+    cursor: pointer;
+    text-transform: uppercase;
     display: inline-flex;
     align-items: center;
     gap: 5px;
     transition: gap 0.3s;
-    text-transform: uppercase;
-    font-size: 0.85rem;
 }
 
-.contenido-art a:hover {
+.btn-leer-mas:hover {
     gap: 10px;
     color: #fb8500;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-    .grid-articulos {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 30px 20px;
-    }
+/* ============================================
+   ESTILOS PARA LA VISTA DE DETALLE (Integrados)
+   ============================================ */
+.vista-detalle {
+    display: none; /* Oculto por defecto */
+    padding: 40px 50px;
+    background: white;
 }
 
-@media (max-width: 600px) {
-    .grid-articulos {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .header-articulos {
-        padding: 40px 20px;
-    }
-    .header-articulos h1 {
-        font-size: 2rem;
-    }
+.contenedor-lectura {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* =========================================================
-   AQUÍ ESTÁ LA MAGIA: ESTILOS PARA EL MENÚ ACTIVO (Amarillo)
-   ========================================================= */
-.navbar .active {
-    color: #0077B6 !important; /* Texto azul */
-    font-weight: 700;
-    position: relative;
-}
-
-/* Esto dibuja la línea amarilla debajo */
-.navbar .active::after {
-    content: '';
-    position: absolute;
+.detalle-img-container {
     width: 100%;
-    height: 3px;
-    bottom: -5px;
-    left: 0;
-    background-color: #FFB703; /* AMARILLO */
-    border-radius: 2px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.detalle-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detalle-titulo {
+    font-size: 2.5rem;
+    color: #0077B6;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.detalle-cuerpo {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+/* Estilos para el contenido HTML del artículo */
+.detalle-cuerpo h3 {
+    color: #003049;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.btn-volver {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #E0E0E0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #0077B6;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .detalle-img-container { height: 250px; }
+    .detalle-titulo { font-size: 1.8rem; }
+    .grid-articulos { grid-template-columns: 1fr; padding: 30px 20px; }
 }
