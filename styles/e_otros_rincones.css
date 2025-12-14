@@ -5,16 +5,22 @@
 /* HEADER */
 .header-rincones {
     background: linear-gradient(135deg, #0077B6 0%, #023E8A 100%);
-    padding: 60px 40px;
+    padding: 60px 50px;
     text-align: center;
     color: white;
-    margin-bottom: 40px;
 }
 
 .header-rincones h1 {
-    font-size: 2.8rem;
-    margin: 0 0 10px 0;
-    font-weight: 800;
+    font-size: 2.5rem;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.header-rincones p {
+    font-size: 1.2rem;
+    opacity: 0.95;
 }
 
 /* CONTENEDOR GRID */

@@ -70,7 +70,7 @@ body.body-mochileros {
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
     width: 100%;
-    height: 450px;
+    height: 425px;
 }
 
 .amazon-card:hover {
