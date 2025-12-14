@@ -73,14 +73,14 @@ const datosInicialesForo = [
         mensajes: [{ usuario: "BudaParty", "texto": "El Retox si quieres fiesta salvaje. El Vitae si quieres fiesta pero poder dormir algo." }, { usuario: "ChillGuy", "texto": "Yo prefiero el Wombats, es más limpio y tipo hotel, aunque menos loco." }]
     }
 ];
-
+// INICIALIZACIÓN AL CARGAR LA PÁGINA
 document.addEventListener('DOMContentLoaded', () => {
     inicializarForo();
     renderizarForo();
     configurarBotonNuevoTema();
 });
 
-// 1. Inicializar datos en LocalStorage (Corrección de Caché)
+// FUNCION PARA INICIALIZAR El FORO
 function inicializarForo() {
     const datosGuardados = localStorage.getItem('foroData');
 
@@ -91,15 +91,16 @@ function inicializarForo() {
     }
 }
 
-// 2. Renderizar Foro
+// Renderizar Foro
 function renderizarForo() {
+    // Verificación del contenedor
     const contenedor = document.getElementById('lista-temas-dinamica');
     if (!contenedor) return;
-
+    // Cargar datos del foro
     const temas = JSON.parse(localStorage.getItem('foroData'));
     const usuarioActivo = sessionStorage.getItem("usuarioActivo");
     let datosUsuario = null;
-
+    // Cargar datos del usuario activo si hay sesión
     if (usuarioActivo) {
         datosUsuario = JSON.parse(localStorage.getItem("user_" + usuarioActivo));
     }
@@ -189,30 +190,31 @@ function renderizarForo() {
     contenedor.innerHTML = htmlContent;
 }
 
-// 3. Funciones de Interacción
+// Función para abrir/cerrar acordeón
 function toggleAcordeon(index) {
     const detalle = document.getElementById(`detalle-tema-${index}`);
     const card = document.getElementById(`tema-card-${index}`);
-
-    if (detalle.style.display === 'none' || detalle.style.display === '') {
+    // Alternar visibilidad
+    if (detalle.style.display === 'none' || detalle.style.display === '') { // Si está cerrado
         detalle.style.display = 'block';
         card.style.borderColor = '#0077B6';
-    } else {
+    } else {  // Si está abierto
         detalle.style.display = 'none';
         card.style.borderColor = '#E0E0E0';
     }
 }
-
+// Función para enviar respuesta
 function enviarRespuesta(indexTema) {
+    // Obtener texto
     const texto = document.getElementById(`texto-resp-${indexTema}`).value;
     if (texto.trim() === "") { alert("El mensaje no puede estar vacío"); return; }
-
+    // Obtener datos usuario y foro
     const usuarioActivo = sessionStorage.getItem("usuarioActivo");
     const datosUsuario = JSON.parse(localStorage.getItem("user_" + usuarioActivo));
     const temas = JSON.parse(localStorage.getItem('foroData'));
-
+    // Añadir mensaje
     if (!temas[indexTema].mensajes) temas[indexTema].mensajes = [];
-
+    // Añadir el nuevo mensaje al array de mensajes del tema
     temas[indexTema].mensajes.push({
         usuario: datosUsuario.usuario,
         texto: texto
@@ -228,7 +230,7 @@ function enviarRespuesta(indexTema) {
     setTimeout(() => toggleAcordeon(indexTema), 50);
 }
 
-// NUEVA FUNCIÓN PARA ELIMINAR
+// FUNCIÓN PARA ELIMINAR
 function eliminarRespuesta(indexTema, indexMsg) {
     if (!confirm("¿Seguro que quieres eliminar tu respuesta? Esta acción no se puede deshacer.")) return;
 
@@ -246,22 +248,24 @@ function eliminarRespuesta(indexTema, indexMsg) {
     // Mantener abierto el tema
     setTimeout(() => toggleAcordeon(indexTema), 50);
 }
-
+// Configurar botón de nuevo tema
 function configurarBotonNuevoTema() {
+    // Verificación del botón
     const btn = document.getElementById('btn-crear-tema');
     btn.onclick = () => {
+        // Verificar sesión
         if (sessionStorage.getItem("usuarioActivo")) {
             const titulo = prompt("Título del tema:");
             if (!titulo) return;
             const cat = prompt("Categoría:", "General");
-
+            // Añadir nuevo tema
             const temas = JSON.parse(localStorage.getItem('foroData'));
             const usuario = JSON.parse(localStorage.getItem("user_" + sessionStorage.getItem("usuarioActivo")));
-
+            // Crear nuevo tema
             temas.push({
                 id: Date.now(), titulo: titulo, autor: usuario.usuario, fecha: "Ahora mismo", categoria: cat, vistas: 0, mensajes: []
             });
-
+            // Guardar y recargar
             localStorage.setItem('foroData', JSON.stringify(temas));
             renderizarForo();
         } else {
@@ -270,6 +274,7 @@ function configurarBotonNuevoTema() {
     };
 }
 
+// Función para redirigir al login
 function irALogin() {
     if (confirm("Necesitas iniciar sesión para participar. ¿Ir al login?")) window.location.href = "login.html";
 }

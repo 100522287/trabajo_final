@@ -210,7 +210,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// --- FUNCIÓN PARA CARGAR LOS ARTÍCULOS EN EL GRID ---
 function cargarArticulos() {
+    // Obtener contenedor
     const contenedor = document.getElementById('contenedor-grid-articulos');
     if (!contenedor) return;
 
@@ -224,7 +226,7 @@ function cargarArticulos() {
         // 2. USAR IDIOMA (Fallback a 'es' si falta la traducción)
         const titulo = art.titulo[lang] || art.titulo.es;
         const desc = art.descripcion[lang] || art.descripcion.es;
-
+        // Construir HTML
         htmlContent += `
             <article class="articulo-completo">
                 <img src="${art.imagen}" alt="${titulo}">
@@ -242,6 +244,7 @@ function cargarArticulos() {
 
 // --- FUNCIÓN PARA ABRIR EL DETALLE (Oculta grid, muestra detalle) ---
 function abrirDetalle(id) {
+    // Buscar artículo por ID 
     const articulo = dbArticulos.find(a => a.id === id);
     if (!articulo) return;
 
@@ -250,7 +253,7 @@ function abrirDetalle(id) {
     // Rellenar datos
     document.getElementById('detalle-img').src = articulo.imagen;
     
-    // 3. USAR IDIOMA EN DETALLE
+    // USAR IDIOMA EN DETALLE
     document.getElementById('detalle-titulo').innerText = articulo.titulo[lang] || articulo.titulo.es;
     
     // Inyectamos el 'texto_completo' con innerHTML para que se vean los <h3> y <br>

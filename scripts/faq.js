@@ -150,14 +150,14 @@ function cargarFAQ() {
     // Verificación de seguridad
     if (!contenedor) return;
 
-    // 1. DETECTAR IDIOMA
+    // DETECTAR IDIOMA
     const lang = localStorage.getItem('idioma') || 'es';
-
+    // GENERAR CONTENIDO DINÁMICO
     try {
         let htmlContent = '';
-        
+        // RECORRER BASE DE DATOS
         dbFaq.forEach(item => {
-            // 2. SELECCIONAR TEXTO SEGÚN IDIOMA
+            // SELECCIONAR TEXTO SEGÚN IDIOMA
             const preg = item.pregunta[lang] || item.pregunta.es;
             const resp = item.respuesta[lang] || item.respuesta.es;
 
@@ -184,16 +184,17 @@ function cargarFAQ() {
     }
 }
 
+// Función para activar el comportamiento de acordeón
 function activarAcordeon() {
     const items = document.querySelectorAll('.faq-item');
-
+    // Añadir evento de clic a cada pregunta
     items.forEach(item => {
         const pregunta = item.querySelector('.faq-pregunta');
-        
+        // Evento clic
         pregunta.addEventListener('click', () => {
             // Abrir/Cerrar el actual
             item.classList.toggle('active');
-            
+            // Ajustar altura de la respuesta
             const respuesta = item.querySelector('.faq-respuesta');
             if (item.classList.contains('active')) {
                 // Si está activo, le damos altura real

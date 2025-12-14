@@ -261,13 +261,15 @@ const dbPacks = {
     }
 };
 
+// Función para cargar los datos del pack en la página de compra
 function cargarDatosCompra() {
+    // OBTENER ID DEL PACK DESDE LA URL
     const params = new URLSearchParams(window.location.search);
     const idPack = params.get('id');
 
-    // 1. DETECTAR IDIOMA
+    // DETECTAR IDIOMA
     const lang = localStorage.getItem('idioma') || 'es';
-
+    // ELEMENTOS DEL DOM A RELLENAR
     const imgElement = document.getElementById('img-pack');
     const precioElement = document.getElementById('precio-pack');
     const tituloElement = document.getElementById('titulo-pack');
@@ -280,10 +282,10 @@ function cargarDatosCompra() {
     if (idPack && dbPacks[idPack]) {
         const pack = dbPacks[idPack];
 
-        // 2. INYECTAR DATOS SEGÚN IDIOMA
+        //INYECTAR DATOS SEGÚN IDIOMA
         imgElement.src = pack.imagen;
         precioElement.textContent = pack.precio;
-        
+        // Títulos y descripciones
         tituloElement.textContent = pack.titulo[lang] || pack.titulo.es;
         descElement.textContent = pack.descripcion[lang] || pack.descripcion.es;
         notaElement.textContent = pack.nota[lang] || pack.nota.es;
@@ -311,6 +313,7 @@ function cargarDatosCompra() {
     }
 }
 
+// Función para validar el formulario de compra
 function validarCompra(event) {
     event.preventDefault();
 
@@ -338,7 +341,7 @@ function validarCompra(event) {
             exitoInvitado: "Purchase successful! (Guest Mode)"
         }
     };
-
+    // Seleccionar mensajes según idioma
     const msgs = mensajes[lang];
 
     // Obtener valores
@@ -353,28 +356,28 @@ function validarCompra(event) {
         alert(msgs.email);
         return;
     }
-
+    // Fecha de caducidad
     if (!fechaCaducidad) {
         alert(msgs.fechaVacia);
         return;
     }
-
+    // Comparar fecha
     const [anioInput, mesInput] = fechaCaducidad.split('-').map(Number);
-    const fechaActual = new Date();
-    const anioActual = fechaActual.getFullYear();
-    const mesActual = fechaActual.getMonth() + 1;
-
+    const fechaActual = new Date(); // Fecha actual
+    const anioActual = fechaActual.getFullYear(); // Año actual
+    const mesActual = fechaActual.getMonth() + 1; // Mes actual (0-11, por eso +1)
+    // Verificar si la tarjeta está caducada
     if (anioInput < anioActual || (anioInput === anioActual && mesInput < mesActual)) {
         alert(msgs.tarjetaCaducada);
         return;
     }
-
+    // CVV: 3 dígitos
     const cvvRegex = /^\d{3}$/;
-    if (!cvvRegex.test(cvv)) {
+    if (!cvvRegex.test(cvv)) { // No son exactamente 3 dígitos, o contiene letras
         alert(msgs.cvv);
         return;
     }
-
+    // Número de tarjeta: al menos 16 dígitos (sin espacios)
     const tarjetaLimpia = tarjeta.replace(/\s/g, '');
     if (tarjetaLimpia.length < 16 || isNaN(tarjetaLimpia)) {
         alert(msgs.tarjetaNum);
@@ -384,6 +387,7 @@ function validarCompra(event) {
     // PROCESAR COMPRA
     const usuarioActivo = sessionStorage.getItem("usuarioActivo");
 
+    // Si hay usuario activo, guardar la compra en su historial
     if (usuarioActivo) {
         const datosUsuario = JSON.parse(localStorage.getItem("user_" + usuarioActivo));
         
@@ -396,6 +400,7 @@ function validarCompra(event) {
         const tituloPack = packObj ? (packObj.titulo[lang] || packObj.titulo.es) : "Pack General";
         const precioPack = packObj ? packObj.precio : "??€";
 
+        // Crear objeto de compra
         const nuevaCompra = {
             pack: tituloPack,
             precio: precioPack,
@@ -403,10 +408,11 @@ function validarCompra(event) {
             metodo: document.getElementById("metodo_pago").value
         };
 
+        // Añadir compra al historial
         if (!datosUsuario.compras) datosUsuario.compras = [];
         datosUsuario.compras.push(nuevaCompra);
         localStorage.setItem("user_" + usuarioActivo, JSON.stringify(datosUsuario));
-
+        // Mensaje de éxito personalizado
         alert(msgs.exitoUsuario.replace("{nombre}", datosUsuario.nombrePila || datosUsuario.nombre));
     } else {
         alert(msgs.exitoInvitado);
