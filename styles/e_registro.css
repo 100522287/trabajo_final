@@ -1,6 +1,6 @@
-/* ============================================
+/* ====================================
    ESTILOS ESPECÍFICOS PARA REGISTRO
-   ============================================ */
+   ==================================== */
 
 /* --- HEADER --- */
 .header-registro {
@@ -35,7 +35,7 @@
     max-width: 550px; /* Un poco más ancho que login por tener más campos */
     padding: 40px;
     border-radius: 20px;
-    border: 3px solid #FFB703; /* Borde amarillo */
+    border: 3px solid #FFB703; 
     box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     color: white;
 }
@@ -62,7 +62,7 @@
     display: none;
 }
 
-/* Creamos nuestro propio botón bonito */
+/* Creamos nuestro propio botón */
 .btn-archivo-custom {
     background-color: #565555;
     color: #333;
@@ -128,7 +128,7 @@
 /* --- CAMPO PARA SUBIR FOTO --- */
 .grupo-foto {
     display: flex;
-    flex-direction: column; /* Etiqueta arriba, input abajo */
+    flex-direction: column; 
     gap: 5px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -160,7 +160,7 @@
 /* --- BOTÓN REGISTRAR --- */
 .btn-registrar-final {
     width: 100%;
-    background-color: #FFB703; /* Amarillo corporativo */
+    background-color: #FFB703; 
     color: #003049;
     padding: 12px;
     border: none;

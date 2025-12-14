@@ -77,7 +77,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Empuja el like abajo */
+    justify-content: space-between;
     flex-grow: 1;
 }
 
@@ -99,8 +99,7 @@
     color: #444;
     line-height: 1.5;
     margin: 0;
-    /* TRUCO CLAVE: Cortar texto a 3 líneas para igualar alturas */
-    display: -webkit-box;
+    display: -webkit-box; 
     -webkit-line-clamp: 3;
     line-clamp: 3; 
     -webkit-box-orient: vertical;
@@ -132,7 +131,7 @@
 
 .boton-like:hover {
     border-color: #8e0e00;
-    color: #8e0e00;
+    color: #8e0e00; /* Cambia a rojo oscuro al hacer hover */
 }
 
 .icono-corazon {

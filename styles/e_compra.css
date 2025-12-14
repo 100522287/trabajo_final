@@ -1,5 +1,5 @@
 /* ============================================
-   ESTILOS ESPECÍFICOS PARA EL PORTAL DE COMPRA (CORREGIDO)
+   ESTILOS ESPECÍFICOS PARA EL PORTAL DE COMPRA
    ============================================ */
 
 /* --- HEADER --- */
@@ -59,7 +59,6 @@
     bottom: 20px;
     right: 20px;
     background-color: #FFB703;
-    /* Amarillo corporativo */
     color: #003049;
     font-weight: 800;
     font-size: 1.4rem;
@@ -76,8 +75,7 @@
     color: #0077B6;
     margin-top: 0;
     font-size: 1.8rem;
-    border-bottom: 3px solid #FFB703;
-    /* Línea amarilla */
+    border-bottom: 3px solid #FFB703; /* Línea amarilla */
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -118,7 +116,6 @@
     position: absolute;
     left: 0;
     color: #FFB703;
-    /* Tick amarillo */
     font-weight: bold;
 }
 
@@ -127,13 +124,12 @@
     font-size: 0.9rem;
     color: #003049;
     background: #FFECB3;
-    /* Fondo amarillo muy suave */
     padding: 15px;
     border-radius: 8px;
     border: 1px solid #FFD54F;
 }
 
-/* --- COLUMNA DERECHA: FORMULARIO (Estilo Tarjeta Azul) --- */
+/* --- COLUMNA DERECHA: FORMULARIO COMPRA --- */
 .columna-formulario {
     flex: 0 0 400px;
 }
@@ -145,7 +141,6 @@
     border-radius: 20px;
     color: white;
     border: 3px solid #FFB703;
-    /* Borde amarillo */
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
@@ -170,7 +165,6 @@
     font-weight: 600;
 }
 
-/* Inputs Blancos/Limpios */
 .grupo-input-dark input,
 .grupo-input-dark select {
     width: 100%;
@@ -218,12 +212,10 @@
     cursor: pointer;
 }
 
-/* Botón Amarillo Corporativo */
 .btn-comprar-final {
     width: 100%;
     background-color: #FFB703;
-    color: #003049;
-    /* Texto oscuro para contraste */
+    color: #003049; /* Texto oscuro */
     border: none;
     padding: 15px;
     font-size: 1.1rem;

@@ -1,8 +1,8 @@
-/* ============================================
-   ESTILOS ESPECÍFICOS PARA FAQ (Preguntas Frecuentes)
-   ============================================ */
+/* ===================================
+   ESTILOS ESPECÍFICOS PARA FAQ 
+   =================================== */
 
-/* --- HEADER FAQ (Igual que Packs y Artículos) --- */
+/* --- HEADER FAQ --- */
 .header-faq {
     background: linear-gradient(135deg, #0077B6 0%, #023E8A 100%);
     padding: 60px 50px;
@@ -27,7 +27,7 @@
 .contenedor-faq-principal {
     background: white;
     padding: 40px 50px;
-    max-width: 900px; /* Un poco más estrecho para leer mejor */
+    max-width: 900px; 
     margin: 0 auto;
 }
 

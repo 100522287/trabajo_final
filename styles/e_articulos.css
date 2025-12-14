@@ -1,6 +1,6 @@
-/* ============================================
-   ESTILOS PARA LA PÁGINA DE ARTÍCULOS (GRID + DETALLE)
-   ============================================ */
+/* =========================================
+   ESTILOS PARA LA PÁGINA DE ARTÍCULOS
+   ========================================= */
 
 /* --- HEADER ARTÍCULOS --- */
 .header-articulos {
@@ -97,9 +97,7 @@
     color: #fb8500;
 }
 
-/* ============================================
-   ESTILOS PARA LA VISTA DE DETALLE (Integrados)
-   ============================================ */
+/* --- VISTA DETALLE ARTÍCULO --- */
 .vista-detalle {
     display: none; /* Oculto por defecto */
     padding: 40px 50px;
@@ -141,7 +139,7 @@
     margin-bottom: 40px;
 }
 
-/* Estilos para el contenido HTML del artículo */
+/* Estilos para subtítulos dentro del cuerpo del artículo */
 .detalle-cuerpo h3 {
     color: #003049;
     margin-top: 30px;

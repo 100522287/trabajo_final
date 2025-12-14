@@ -2,7 +2,7 @@
    ESTILOS ESPECÍFICOS PARA LA PÁGINA DE PAQUETES
    ============================================ */
 
-/* --- HEADER PAQUETES --- */
+/* --- HEADER --- */
 .header-packs {
     background: linear-gradient(135deg, #0077B6 0%, #023E8A 100%);
     padding: 60px 50px;
@@ -247,7 +247,7 @@
     padding: 0;
     margin: 0 0 25px 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
     gap: 10px;
 }
 
@@ -295,9 +295,7 @@
     /* Asegura que el texto siga blanco al pasar el ratón */
 }
 
-/* ============================================
-   MEDIA QUERIES - RESPONSIVE
-   ============================================ */
+/* RESPONSIVE */
 
 /* --- TABLET (1024px y menos) --- */
 @media only screen and (max-width: 1024px) {

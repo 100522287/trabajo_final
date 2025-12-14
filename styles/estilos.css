@@ -161,17 +161,16 @@ body.body-mochileros {
     text-decoration: none;
     color: #2C3E50;
     font-weight: 700; /* Un poco más negrita para que se lea bien */
-    font-size: 0.85rem; /* Tamaño ajustado */
+    font-size: 0.85rem; 
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: color 0.3s;
     position: relative;
     
-    /* MAGIA PARA DOS LÍNEAS: */
     display: inline-block;
-    text-align: center;     /* Centra el texto una vez que salta de línea */
-    width: min-content;     /* Fuerza el salto de línea en los espacios */
-    line-height: 1.2;       /* Espacio entre las dos líneas de texto */
+    text-align: center; /* Centra el texto una vez que salta de línea */
+    width: min-content; /* Fuerza el salto de línea en los espacios */
+    line-height: 1.2; /* Espacio entre las dos líneas de texto */
 }
 
 /* El hover del texto (color azul) */
@@ -211,7 +210,7 @@ body.body-mochileros {
     height: 3px;
     bottom: -5px;
     left: 0;
-    background-color: #FFB703; /* Amarillo */
+    background-color: #FFB703; 
     border-radius: 2px;
     transform: none;
 }
@@ -236,8 +235,8 @@ body.body-mochileros {
 }
 
 .idioma-login {
-    display: flex;           /* Obliga a los elementos a ponerse en fila */
-    align-items: center;     /* Los centra verticalmente para que no se vean desalineados */
+    display: flex; /* Obliga a los elementos a ponerse en fila */
+    align-items: center; /* Los centra verticalmente para que no se vean desalineados */
     gap: 5px;
 }
 
@@ -300,7 +299,7 @@ body.body-mochileros {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%); /* Degradado en la foto budista*/
 }
 
 .hero-content {
@@ -465,8 +464,7 @@ body.body-mochileros {
     align-items: center;
     gap: 20px;
     position: relative;
-    padding: 0 20px;
-    /* Un poco de aire a los lados */
+    padding: 0 20px; /* Espacio para los botones de navegación */
 }
 
 .track-carrusel {

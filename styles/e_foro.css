@@ -1,7 +1,8 @@
-/* ============================================
+/* ====================================
    ESTILOS ESPECÍFICOS PARA EL FORO
-   ============================================ */
+   ==================================== */
 
+/* --- HEADER FORO --- */
 .header-foro {
     background: linear-gradient(135deg, #0077B6 0%, #023E8A 100%);
     padding: 60px 50px;
@@ -55,7 +56,6 @@
 
 /* --- LISTA DE TEMAS --- */
 .tema-item {
-    /* Quitamos display:flex global para poder meter div de respuestas debajo */
     border: 1px solid #E0E0E0;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -137,8 +137,8 @@
 .stat-label {
     font-size: 0.7rem;
     text-transform: uppercase;
-    color: #444; /* Gris casi negro */
-    font-weight: 600; /* Un poco más de peso ayuda */
+    color: #444; 
+    font-weight: 600; 
 }
 
 /* --- RESPUESTAS DESPLEGABLES --- */
