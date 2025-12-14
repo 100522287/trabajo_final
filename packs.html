@@ -14,11 +14,9 @@
 
     <div class="layout-global">
 
-        <!-- PUBLICIDAD IZQUIERDA -->
         <aside class="zona-publicidad publicidad-izquierda">
             <div class="titulo-ad" data-lang="ad_recommend">Te recomendamos</div>
 
-            <!-- Producto 1 -->
             <a href="https://www.amazon.es/NORTIV8-Senderismo-Impermeables-Zapatillas-Antideslizante/dp/B0BFPTSSQW/"
                 target="_blank" class="amazon-card">
                 <div class="img-container">
@@ -44,63 +42,49 @@
             </a>
         </aside>
 
-        <!-- CONTENIDO PRINCIPAL -->
         <div class="contenedor-principal">
 
             <nav class="navbar">
                 <ul class="menu-header-footer">
                     <li><a href="home_no_session.html" class="logo-nav"><img src="images/logo_principal.png" alt="Mochileros Inicio"></a></li>
-                    <li><a href="packs.html">Packs</a></li>
-                    <li><a href="foro.html">Foro</a></li>
-                    <li><a href="articulos.html">Artículos</a></li>
-                    <li><a href="faq.html">Preguntas frecuentes</a></li>                    
-                    <li><a href="otros_rincones.html">Otros rincones</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-
+                    <li><a href="packs.html" data-lang="nav_packs">Packs</a></li>
+                    <li><a href="foro.html" data-lang="nav_forum">Foro</a></li>
+                    <li><a href="articulos.html" data-lang="nav_articles">Artículos</a></li>
+                    <li><a href="faq.html" data-lang="nav_faq">Preguntas frecuentes</a></li>                    
+                    <li><a href="otros_rincones.html" data-lang="nav_corners">Otros rincones</a></li>
+                    <li><a href="nosotros.html" data-lang="nav_about">Nosotros</a></li>
                 </ul>
                 <div class="idioma-login" id="panel-usuario-nav">
                     <select id="selector-idioma" class="selector-idioma">
                         <option value="es">Español</option>
                         <option value="en">English</option>
                     </select>
-                    <a href="login.html">Iniciar Sesión</a>
+                    <a href="login.html" data-lang="nav_login">Iniciar Sesión</a>
                 </div>
             </nav>
 
-            <!-- HEADER PAQUETES -->
             <div class="header-packs">
                 <h1 data-lang="packs_title">Paquetes de viaje</h1>
                 <p data-lang="packs_subtitle">Descubre nuestros mejores destinos al mejor precio</p>
             </div>
 
-            <!-- FILTROS MÓVIL/TABLET (desplegable) -->
             <div class="filtros-mobile">
                 <button class="btn-toggle-filtros" id="btnToggleFiltros">
                     <span data-lang="filters">Filtros</span>
                     <span class="icono-flecha">▼</span>
                 </button>
                 <div class="panel-filtros-mobile" id="panelFiltrosMobile">
-                    <!-- Contenido de filtros -->
                     <div class="grupo-filtro">
                         <h4 data-lang="filter_country">País</h4>
-                        <label><input type="checkbox" value="hungria" data-filter="pais"> <span
-                                data-lang="country_hungary">Hungría</span></label>
-                        <label><input type="checkbox" value="italia" data-filter="pais"> <span
-                                data-lang="country_italy">Italia</span></label>
-                        <label><input type="checkbox" value="japon" data-filter="pais"> <span
-                                data-lang="country_japan">Japón</span></label>
-                        <label><input type="checkbox" value="peru" data-filter="pais"> <span
-                                data-lang="country_peru">Perú</span></label>
-                        <label><input type="checkbox" value="kenia" data-filter="pais"> <span
-                                data-lang="country_kenya">Kenia</span></label>
-                        <label><input type="checkbox" value="eeuu" data-filter="pais"> <span
-                                data-lang="country_usa">Estados Unidos</span></label>
-                        <label><input type="checkbox" value="marruecos" data-filter="pais"> <span
-                                data-lang="country_morocco">Marruecos</span></label>
-                        <label><input type="checkbox" value="nueva-zelanda" data-filter="pais"> <span
-                                data-lang="country_newzealand">Nueva Zelanda</span></label>
-                        <label><input type="checkbox" value="republica-checa" data-filter="pais"> <span
-                                data-lang="country_czechrepublic">República Checa</span></label>
+                        <label><input type="checkbox" value="hungria" data-filter="pais"> <span data-lang="country_hungary">Hungría</span></label>
+                        <label><input type="checkbox" value="italia" data-filter="pais"> <span data-lang="country_italy">Italia</span></label>
+                        <label><input type="checkbox" value="japon" data-filter="pais"> <span data-lang="country_japan">Japón</span></label>
+                        <label><input type="checkbox" value="peru" data-filter="pais"> <span data-lang="country_peru">Perú</span></label>
+                        <label><input type="checkbox" value="kenia" data-filter="pais"> <span data-lang="country_kenia">Kenia</span></label>
+                        <label><input type="checkbox" value="eeuu" data-filter="pais"> <span data-lang="country_usa">Estados Unidos</span></label>
+                        <label><input type="checkbox" value="marruecos" data-filter="pais"> <span data-lang="country_morocco">Marruecos</span></label>
+                        <label><input type="checkbox" value="nueva-zelanda" data-filter="pais"> <span data-lang="country_newzealand">Nueva Zelanda</span></label>
+                        <label><input type="checkbox" value="republica-checa" data-filter="pais"> <span data-lang="country_czechrepublic">República Checa</span></label>
                     </div>
 
                     <div class="grupo-filtro">
@@ -112,50 +96,33 @@
 
                     <div class="grupo-filtro">
                         <h4 data-lang="filter_destination">Tipo de destino</h4>
-                        <label><input type="checkbox" value="ciudad" data-filter="tipo"> <span
-                                data-lang="dest_city">Ciudad</span></label>
-                        <label><input type="checkbox" value="playa" data-filter="tipo"> <span
-                                data-lang="dest_beach">Playa</span></label>
-                        <label><input type="checkbox" value="montana" data-filter="tipo"> <span
-                                data-lang="dest_mountain">Montaña</span></label>
-                        <label><input type="checkbox" value="aventura" data-filter="tipo"> <span
-                                data-lang="dest_adventure">Aventura</span></label>
+                        <label><input type="checkbox" value="ciudad" data-filter="tipo"> <span data-lang="dest_city">Ciudad</span></label>
+                        <label><input type="checkbox" value="playa" data-filter="tipo"> <span data-lang="dest_beach">Playa</span></label>
+                        <label><input type="checkbox" value="montana" data-filter="tipo"> <span data-lang="dest_mountain">Montaña</span></label>
+                        <label><input type="checkbox" value="aventura" data-filter="tipo"> <span data-lang="dest_adventure">Aventura</span></label>
                     </div>
 
-                    <button class="btn-aplicar-filtros" id="btnAplicarFiltros" data-lang="apply_filters">Aplicar
-                        filtros</button>
-                    <button class="btn-limpiar-filtros" id="btnLimpiarFiltros" data-lang="clear_filters">Limpiar
-                        filtros</button>
+                    <button class="btn-aplicar-filtros" id="btnAplicarFiltros" data-lang="apply_filters">Aplicar filtros</button>
+                    <button class="btn-limpiar-filtros" id="btnLimpiarFiltros" data-lang="clear_filters">Limpiar filtros</button>
                 </div>
             </div>
 
-            <!-- CONTENEDOR DE PAQUETES CON FILTROS -->
             <div class="contenedor-packs-filtros">
 
-                <!-- PANEL DE FILTROS LATERAL (Desktop) -->
                 <aside class="panel-filtros-lateral">
                     <h3 data-lang="filters">Filtros</h3>
 
                     <div class="grupo-filtro">
                         <h4 data-lang="filter_country">País</h4>
-                        <label><input type="checkbox" value="hungria" data-filter="pais"> <span
-                                data-lang="country_hungary">Hungría</span></label>
-                        <label><input type="checkbox" value="italia" data-filter="pais"> <span
-                                data-lang="country_italy">Italia</span></label>
-                        <label><input type="checkbox" value="japon" data-filter="pais"> <span
-                                data-lang="country_japan">Japón</span></label>
-                        <label><input type="checkbox" value="peru" data-filter="pais"> <span
-                                data-lang="country_peru">Perú</span></label>
-                        <label><input type="checkbox" value="kenia" data-filter="pais"> <span
-                                data-lang="country_kenya">Kenia</span></label>
-                        <label><input type="checkbox" value="eeuu" data-filter="pais"> <span
-                                data-lang="country_usa">Estados Unidos</span></label>
-                        <label><input type="checkbox" value="marruecos" data-filter="pais"> <span
-                                data-lang="country_morocco">Marruecos</span></label>
-                        <label><input type="checkbox" value="nueva-zelanda" data-filter="pais"> <span
-                                data-lang="country_newzealand">Nueva Zelanda</span></label>
-                        <label><input type="checkbox" value="republica-checa" data-filter="pais"> <span
-                                data-lang="country_czechrepublic">República Checa</span></label>
+                        <label><input type="checkbox" value="hungria" data-filter="pais"> <span data-lang="country_hungary">Hungría</span></label>
+                        <label><input type="checkbox" value="italia" data-filter="pais"> <span data-lang="country_italy">Italia</span></label>
+                        <label><input type="checkbox" value="japon" data-filter="pais"> <span data-lang="country_japan">Japón</span></label>
+                        <label><input type="checkbox" value="peru" data-filter="pais"> <span data-lang="country_peru">Perú</span></label>
+                        <label><input type="checkbox" value="kenia" data-filter="pais"> <span data-lang="country_kenia">Kenia</span></label>
+                        <label><input type="checkbox" value="eeuu" data-filter="pais"> <span data-lang="country_usa">Estados Unidos</span></label>
+                        <label><input type="checkbox" value="marruecos" data-filter="pais"> <span data-lang="country_morocco">Marruecos</span></label>
+                        <label><input type="checkbox" value="nueva-zelanda" data-filter="pais"> <span data-lang="country_newzealand">Nueva Zelanda</span></label>
+                        <label><input type="checkbox" value="republica-checa" data-filter="pais"> <span data-lang="country_czechrepublic">República Checa</span></label>
                     </div>
 
                     <div class="grupo-filtro">
@@ -167,21 +134,15 @@
 
                     <div class="grupo-filtro">
                         <h4 data-lang="filter_destination">Tipo de destino</h4>
-                        <label><input type="checkbox" value="ciudad" data-filter="tipo"> <span
-                                data-lang="dest_city">Ciudad</span></label>
-                        <label><input type="checkbox" value="playa" data-filter="tipo"> <span
-                                data-lang="dest_beach">Playa</span></label>
-                        <label><input type="checkbox" value="montana" data-filter="tipo"> <span
-                                data-lang="dest_mountain">Montaña</span></label>
-                        <label><input type="checkbox" value="aventura" data-filter="tipo"> <span
-                                data-lang="dest_adventure">Aventura</span></label>
+                        <label><input type="checkbox" value="ciudad" data-filter="tipo"> <span data-lang="dest_city">Ciudad</span></label>
+                        <label><input type="checkbox" value="playa" data-filter="tipo"> <span data-lang="dest_beach">Playa</span></label>
+                        <label><input type="checkbox" value="montana" data-filter="tipo"> <span data-lang="dest_mountain">Montaña</span></label>
+                        <label><input type="checkbox" value="aventura" data-filter="tipo"> <span data-lang="dest_adventure">Aventura</span></label>
                     </div>
 
-                    <button class="btn-limpiar-filtros" id="btnLimpiarFiltrosDesktop" data-lang="clear_filters">Limpiar
-                        filtros</button>
+                    <button class="btn-limpiar-filtros" id="btnLimpiarFiltrosDesktop" data-lang="clear_filters">Limpiar filtros</button>
                 </aside>
 
-                <!-- LISTA DE PAQUETES -->
                 <div class="lista-paquetes" id="listaPaquetes"></div>
             </div>
 
@@ -192,14 +153,10 @@
                         <div class="bloque-siguenos">
                             <h5 data-lang="follow_us">SÍGUENOS</h5>
                             <div class="iconos-sociales">
-                                <a href="https://www.instagram.com/" target="_blank" title="Instagram"><img
-                                        src="images/instagram_r.png" alt="IG"></a>
-                                <a href="https://www.facebook.com/?locale=es_ES%2F" target="_blank"
-                                    title="Facebook"><img src="images/facebook_r.png" alt="FB"></a>
-                                <a href="https://www.tiktok.com/es" target="_blank" title="TikTok"><img
-                                        src="images/tiktok_r.png" alt="TK"></a>
-                                <a href="https://www.youtube.com/" target="_blank" title="YouTube"><img
-                                        src="images/youtube_r.png" alt="YT"></a>
+                                <a href="https://www.instagram.com/" target="_blank" title="Instagram"><img src="images/instagram_r.png" alt="IG"></a>
+                                <a href="https://www.facebook.com/?locale=es_ES%2F" target="_blank" title="Facebook"><img src="images/facebook_r.png" alt="FB"></a>
+                                <a href="https://www.tiktok.com/es" target="_blank" title="TikTok"><img src="images/tiktok_r.png" alt="TK"></a>
+                                <a href="https://www.youtube.com/" target="_blank" title="YouTube"><img src="images/youtube_r.png" alt="YT"></a>
                             </div>
                         </div>
                     </div>
@@ -207,7 +164,7 @@
                         <h4 data-lang="legal">Legal</h4>
                         <p data-lang="terms">Términos y condiciones</p>
                         <p data-lang="info">Información</p>
-                        <p data-lang="page">Página</p>
+                        <p data-lang="page">Política de privacidad</p>
                     </div>
                     <div class="col-footer">
                         <h4 data-lang="help">Ayuda</h4>
@@ -234,7 +191,6 @@
 
         </div>
 
-        <!-- PUBLICIDAD DERECHA -->
         <aside class="zona-publicidad publicidad-derecha">
             <div class="titulo-ad" data-lang="ad_top">Top Ventas</div>
 

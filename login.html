@@ -15,21 +15,21 @@
     <div class="layout-global">
 
         <aside class="zona-publicidad publicidad-izquierda">
-            <div class="titulo-ad">Te recomendamos</div>
+            <div class="titulo-ad" data-lang="ad_recommend">Te recomendamos</div>
             <a href="https://www.amazon.es/NORTIV8-Senderismo-Impermeables-Zapatillas-Antideslizante/dp/B0BFPTSSQW/" target="_blank" class="amazon-card">
                 <div class="img-container"><img src="images/izquierda-arriba.jpg" alt="Botas"></div>
                 <div class="info-ad">
-                    <p class="titulo-prod">Botas Senderismo</p>
+                    <p class="titulo-prod" data-lang="prod_boots1">Botas Senderismo</p>
                     <div class="precio-ad">50,86€</div>
-                    <button class="btn-amazon">Ver en Amazon</button>
+                    <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
                 </div>
             </a>
             <a href="https://www.amazon.es/Columbia-Waterproof-Impermeables-Trekking-Senderismo/dp/B0CLW4PW32/" target="_blank" class="amazon-card">
                 <div class="img-container"><img src="images/izquierda-abajo.jpg" alt="Chaqueta"></div>
                 <div class="info-ad">
-                    <p class="titulo-prod">Chaqueta Térmica</p>
+                    <p class="titulo-prod" data-lang="prod_boots2">Chaqueta Térmica</p>
                     <div class="precio-ad">89,99€</div>
-                    <button class="btn-amazon">Ver en Amazon</button>
+                    <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
                 </div>
             </a>
         </aside>
@@ -39,50 +39,47 @@
             <nav class="navbar">
                 <ul class="menu-header-footer">
                     <li><a href="home_no_session.html" class="logo-nav"><img src="images/logo_principal.png" alt="Mochileros Inicio"></a></li>
-                    <li><a href="packs.html">Packs</a></li>
-                    <li><a href="foro.html">Foro</a></li>
-                    <li><a href="articulos.html">Artículos</a></li>
-                    <li><a href="faq.html">Preguntas frecuentes</a></li>                    
-                    <li><a href="otros_rincones.html">Otros rincones</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-
+                    <li><a href="packs.html" data-lang="nav_packs">Packs</a></li>
+                    <li><a href="foro.html" data-lang="nav_forum">Foro</a></li>
+                    <li><a href="articulos.html" data-lang="nav_articles">Artículos</a></li>
+                    <li><a href="faq.html" data-lang="nav_faq">Preguntas frecuentes</a></li>                    
+                    <li><a href="otros_rincones.html" data-lang="nav_corners">Otros rincones</a></li>
+                    <li><a href="nosotros.html" data-lang="nav_about">Nosotros</a></li>
                 </ul>
                 <div class="idioma-login" id="panel-usuario-nav">
                     <select id="selector-idioma" class="selector-idioma">
                         <option value="es">Español</option>
                         <option value="en">English</option>
                     </select>
-                    <a href="login.html">Iniciar Sesión</a>
+                    <a href="login.html" data-lang="nav_login">Iniciar Sesión</a>
                 </div>
             </nav>
 
             <header class="header-login">
-                <h1>Portal de Acceso</h1>
+                <h1 data-lang="login_title">Portal de Acceso</h1>
             </header>
 
             <main class="main-login">
                 <div class="login-card">
-                    <h2>Inicio de sesión:</h2>
-
-                    <form id="form-login" onsubmit="event.preventDefault(); iniciarSesion();" class="formulario-login">
+                    <h2 data-lang="nav_login">Inicio de sesión:</h2> <form id="form-login" onsubmit="event.preventDefault(); iniciarSesion();" class="formulario-login">
                         <div class="grupo-input">
-                            <label for="usuario">Usuario</label>
+                            <label for="usuario" data-lang="label_user">Usuario</label>
                             <input type="text" id="usuario" name="usuario" placeholder="Ej: JuanViajero" required>
                         </div>
 
                         <div class="grupo-input">
-                            <label for="password">Contraseña</label>
+                            <label for="password" data-lang="label_password">Contraseña</label>
                             <input type="password" id="password" name="password" placeholder="••••••••" required>
                         </div>
 
                         <div class="grupo-checkbox">
                             <input type="checkbox" id="recordar" name="recordar">
-                            <label for="recordar">Recordar sesión</label>
+                            <label for="recordar" data-lang="label_remember">Recordar sesión</label>
                         </div>
 
                         <div class="botones-login">
-                            <a href="registro.html" class="btn-registrar">Registrar</a>
-                            <button type="submit" class="btn-entrar">Iniciar sesión</button>
+                            <a href="registro.html" class="btn-registrar" data-lang="btn_register">Registrar</a>
+                            <button type="submit" class="btn-entrar" data-lang="btn_enter">Iniciar sesión</button>
                         </div>
                     </form>
                 </div>
@@ -91,7 +88,7 @@
             <footer>
                 <div class="footer-top">
                     <div class="col-footer">
-                        <h4>Mochileros por el mundo</h4>
+                        <h4 data-lang="footer_title">Mochileros por el mundo</h4>
                         <div class="bloque-siguenos">
                             <h5 data-lang="follow_us">SÍGUENOS</h5>
                             <div class="iconos-sociales">
@@ -104,28 +101,29 @@
                                 <a href="https://www.youtube.com/" target="_blank" title="YouTube"><img
                                         src="images/youtube_r.png" alt="YT"></a>
                             </div>
+                        </div>
                     </div>
                     <div class="col-footer">
-                        <h4>Legal</h4>
-                        <p>Términos y condiciones</p>
-                        <p>Información</p>
-                        <p>Política de privacidad</p>
+                        <h4 data-lang="legal">Legal</h4>
+                        <p data-lang="terms">Términos y condiciones</p>
+                        <p data-lang="info">Información</p>
+                        <p data-lang="page">Política de privacidad</p>
                     </div>
                     <div class="col-footer">
-                        <h4>Ayuda</h4>
-                        <p>Preguntas frecuentes</p>
-                        <p>Problemas con la web</p>
-                        <p>Contacto soporte</p>
+                        <h4 data-lang="help">Ayuda</h4>
+                        <p data-lang="faq_short">Preguntas frecuentes</p>
+                        <p data-lang="problems">Problemas</p>
+                        <p data-lang="incidents">Incidencias web</p>
                     </div>
                     <div class="col-footer">
-                        <h4>Contacto</h4>
-                        <p>Dudas generales</p>
-                        <p>+34 91 123 45 67</p>
+                        <h4 data-lang="contact">Contacto</h4>
+                        <p data-lang="doubts">Dudas</p>
+                        <p data-lang="phone">Número telefónico</p>
                     </div>
                 </div>
 
                 <div class="footer-bottom-pago">
-                    <h5>PAGO SEGURO</h5>
+                    <h5 data-lang="secure_pay">PAGO SEGURO</h5>
                     <div class="iconos-pago">
                         <div class="tarjeta-icono"><img src="images/visa.png" alt="Visa"></div>
                         <div class="tarjeta-icono"><img src="images/matercard.png" alt="Mastercard"></div>
@@ -134,14 +132,16 @@
                 </div>
             </footer>
 
-        </div> <aside class="zona-publicidad publicidad-derecha">
-            <div class="titulo-ad">Top Ventas</div>
+        </div> 
+        
+        <aside class="zona-publicidad publicidad-derecha">
+            <div class="titulo-ad" data-lang="ad_top">Top Ventas</div>
             <a href="https://www.amazon.es/PICSIL-Impermeable-Capacidad-Crosstraining-Senderismo/dp/B0DV9GKVM4" target="_blank" class="amazon-card">
                 <div class="img-container"><img src="images/derecha-arriba.jpg" alt="Mochila"></div>
                 <div class="info-ad">
-                    <p class="titulo-prod">Mochila Táctica</p>
+                    <p class="titulo-prod" data-lang="prod_backpack">Mochila Táctica</p>
                     <div class="precio-ad">129,95€</div>
-                    <button class="btn-amazon">Ver en Amazon</button>
+                    <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
                 </div>
             </a>
             <a href="https://www.amazon.es/Night-Cat-Tienda-Persona-Ultraligero/dp/B0DYD4D2XB" target="_blank" class="amazon-card">
@@ -149,12 +149,13 @@
                 <div class="info-ad">
                     <p class="titulo-prod">Tienda Ultraligera</p>
                     <div class="precio-ad">152,99€</div>
-                    <button class="btn-amazon">Ver en Amazon</button>
+                    <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
                 </div>
             </a>
         </aside>
 
-    </div> <script type="text/javascript" src="scripts/main.js"></script>
+    </div> 
+    <script type="text/javascript" src="scripts/main.js"></script>
     <script type="text/javascript" src="scripts/login.js"></script>
 </body>
 

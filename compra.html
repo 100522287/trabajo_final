@@ -15,14 +15,14 @@
     <div class="layout-global">
 
         <aside class="zona-publicidad publicidad-izquierda">
-            <div class="titulo-ad">Te recomendamos</div>
+            <div class="titulo-ad" data-lang="ad_recommend">Te recomendamos</div>
             <a href="https://www.amazon.es/NORTIV8-Senderismo-Impermeables-Zapatillas-Antideslizante/dp/B0BFPTSSQW/"
                 target="_blank" class="amazon-card">
                 <div class="img-container"><img src="images/izquierda-arriba.jpg" alt="Botas"></div>
                 <div class="info-ad">
-                    <p class="titulo-prod">Botas Senderismo</p>
+                    <p class="titulo-prod" data-lang="prod_boots1">Botas Senderismo</p>
                     <div class="precio-ad">53,54€ </div>
-                    <button class="btn-amazon">Ver en Amazon</button>
+                    <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
                 </div>
             </a>
             <a href="https://www.amazon.es/Columbia-Waterproof-Impermeables-Trekking-Senderismo/dp/B0CLW4PW32/"
@@ -43,26 +43,25 @@
             <nav class="navbar">
                 <ul class="menu-header-footer">
                     <li><a href="home_no_session.html" class="logo-nav"><img src="images/logo_principal.png" alt="Mochileros Inicio"></a></li>
-                    <li><a href="packs.html">Packs</a></li>
-                    <li><a href="foro.html">Foro</a></li>
-                    <li><a href="articulos.html">Artículos</a></li>
-                    <li><a href="faq.html">Preguntas frecuentes</a></li>                    
-                    <li><a href="otros_rincones.html">Otros rincones</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-
+                    <li><a href="packs.html" data-lang="nav_packs">Packs</a></li>
+                    <li><a href="foro.html" data-lang="nav_forum">Foro</a></li>
+                    <li><a href="articulos.html" data-lang="nav_articles">Artículos</a></li>
+                    <li><a href="faq.html" data-lang="nav_faq">Preguntas frecuentes</a></li>                    
+                    <li><a href="otros_rincones.html" data-lang="nav_corners">Otros rincones</a></li>
+                    <li><a href="nosotros.html" data-lang="nav_about">Nosotros</a></li>
                 </ul>
                 <div class="idioma-login" id="panel-usuario-nav">
                     <select id="selector-idioma" class="selector-idioma">
                         <option value="es">Español</option>
                         <option value="en">English</option>
                     </select>
-                    <a href="login.html">Iniciar Sesión</a>
+                    <a href="login.html" data-lang="nav_login">Iniciar Sesión</a>
                 </div>
             </nav>
 
             <header class="header-compra">
-                <h1>Portal de Compra</h1>
-                <p>Estás a un paso de tu próxima gran aventura</p>
+                <h1 data-lang="compra_title">Portal de Compra</h1>
+                <p data-lang="compra_subtitle">Estás a un paso de tu próxima gran aventura</p>
             </header>
 
             <main class="main-compra">
@@ -81,69 +80,66 @@
                             </p>
 
                             <div class="detalles-tecnicos">
-                                <h3>Lo que incluye tu experiencia:</h3>
+                                <h3 data-lang="compra_includes">Lo que incluye tu experiencia:</h3>
                                 <ul id="lista-detalles">
                                 </ul>
                             </div>
 
                             <div class="nota-importante">
-                                <strong><i class="fas fa-info-circle"></i> Nota:</strong>
-                                <span id="nota-pack">Los vuelos están sujetos a disponibilidad hasta el momento del
-                                    pago.</span>
+                                <strong><i class="fas fa-info-circle"></i> <span data-lang="compra_note_label">Nota:</span></strong>
+                                <span id="nota-pack">Los vuelos están sujetos a disponibilidad hasta el momento del pago.</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="columna-formulario">
-                        <div class="columna-formulario">
-                            <div class="card-formulario">
-                                <h3>Formulario de compra</h3>
+                        <div class="card-formulario">
+                            <h3 data-lang="compra_title">Formulario de compra</h3>
 
-                                <form id="form-compra" onsubmit="validarCompra(event)" class="form-pago">
+                            <form id="form-compra" onsubmit="validarCompra(event)" class="form-pago">
 
+                                <div class="grupo-input-dark">
+                                    <label data-lang="label_name">Nombre y Apellido/s</label>
+                                    <input type="text" id="nombre_cliente" placeholder="Ej: Juan Pérez" required>
+                                </div>
+
+                                <div class="grupo-input-dark">
+                                    <label data-lang="label_payment_method">Forma de pago</label>
+                                    <select id="metodo_pago" class="select-pago">
+                                        <option value="visa">Tarjeta VISA</option>
+                                        <option value="mastercard">Mastercard</option>
+                                        <option value="paypal">PayPal</option>
+                                    </select>
+                                </div>
+
+                                <div class="grupo-input-dark">
+                                    <label data-lang="label_card_num">Número de tarjeta</label>
+                                    <input type="text" id="num_tarjeta" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                                </div>
+
+                                <div class="fila-doble">
                                     <div class="grupo-input-dark">
-                                        <label>Nombre y Apellido/s</label>
-                                        <input type="text" id="nombre_cliente" placeholder="Ej: Juan Pérez" required>
+                                        <label data-lang="label_expiry">Caducidad</label>
+                                        <input type="month" id="fecha_caducidad" required>
                                     </div>
-
                                     <div class="grupo-input-dark">
-                                        <label>Forma de pago</label>
-                                        <select id="metodo_pago" class="select-pago">
-                                            <option value="visa">Tarjeta VISA</option>
-                                            <option value="mastercard">Mastercard</option>
-                                            <option value="paypal">PayPal</option>
-                                        </select>
+                                        <label data-lang="label_cvv">CVV</label>
+                                        <input type="text" id="cvv" placeholder="123" maxlength="3" required>
                                     </div>
+                                </div>
 
-                                    <div class="grupo-input-dark">
-                                        <label>Número de tarjeta</label>
-                                        <input type="text" id="num_tarjeta" placeholder="0000 0000 0000 0000" maxlength="19" required>
-                                    </div>
+                                <div class="grupo-input-dark">
+                                    <label data-lang="label_email">Correo electrónico</label>
+                                    <input type="email" id="email_cliente" placeholder="juanprz23@gmail.com" required>
+                                </div>
 
-                                    <div class="fila-doble">
-                                        <div class="grupo-input-dark">
-                                            <label>Caducidad</label>
-                                            <input type="month" id="fecha_caducidad" required>
-                                        </div>
-                                        <div class="grupo-input-dark">
-                                            <label>CVV</label>
-                                            <input type="text" id="cvv" placeholder="123" maxlength="3" required>
-                                        </div>
-                                    </div>
+                                <div class="grupo-checkbox-dark">
+                                    <input type="checkbox" id="terms" required>
+                                    <label for="terms" data-lang="label_terms">Acepto Términos y Condiciones</label>
+                                </div>
 
-                                    <div class="grupo-input-dark">
-                                        <label>Correo electrónico</label>
-                                        <input type="email" id="email_cliente" placeholder="juanprz23@gmail.com" required>
-                                    </div>
-
-                                    <div class="grupo-checkbox-dark">
-                                        <input type="checkbox" id="terms" required>
-                                        <label for="terms">Acepto Términos y Condiciones</label>
-                                    </div>
-
-                                    <button type="submit" class="btn-comprar-final">Confirmar Compra</button>
-                                </form>
-                            </div>
+                                <button type="submit" class="btn-comprar-final" data-lang="btn_confirm">Confirmar Compra</button>
+                            </form>
                         </div>
                     </div>
 
@@ -153,9 +149,9 @@
             <footer>
                 <div class="footer-top">
                     <div class="col-footer">
-                        <h4>Mochileros por el mundo</h4>
+                        <h4 data-lang="footer_title">Mochileros por el mundo</h4>
                         <div class="bloque-siguenos">
-                            <h5>SÍGUENOS</h5>
+                            <h5 data-lang="follow_us">SÍGUENOS</h5>
                             <div class="iconos-sociales">
                                 <a href="https://www.instagram.com/" target="_blank" title="Instagram"><img
                                         src="images/instagram_r.png" alt="IG"></a>
@@ -169,26 +165,26 @@
                         </div>
                     </div>
                     <div class="col-footer">
-                        <h4>Legal</h4>
-                        <p>Términos y condiciones</p>
-                        <p>Información</p>
-                        <p>Política de privacidad</p>
+                        <h4 data-lang="legal">Legal</h4>
+                        <p data-lang="terms">Términos y condiciones</p>
+                        <p data-lang="info">Información</p>
+                        <p data-lang="page">Política de privacidad</p>
                     </div>
                     <div class="col-footer">
-                        <h4>Ayuda</h4>
-                        <p>Preguntas frecuentes</p>
-                        <p>Problemas con la web</p>
-                        <p>Contacto soporte</p>
+                        <h4 data-lang="help">Ayuda</h4>
+                        <p data-lang="faq_short">Preguntas frecuentes</p>
+                        <p data-lang="problems">Problemas</p>
+                        <p data-lang="incidents">Incidencias web</p>
                     </div>
                     <div class="col-footer">
-                        <h4>Contacto</h4>
-                        <p>Dudas generales</p>
-                        <p>+34 91 123 45 67</p>
+                        <h4 data-lang="contact">Contacto</h4>
+                        <p data-lang="doubts">Dudas</p>
+                        <p data-lang="phone">Número telefónico</p>
                     </div>
                 </div>
 
                 <div class="footer-bottom-pago">
-                    <h5>PAGO SEGURO</h5>
+                    <h5 data-lang="secure_pay">PAGO SEGURO</h5>
                     <div class="iconos-pago">
                         <div class="tarjeta-icono"><img src="images/visa.png" alt="Visa"></div>
                         <div class="tarjeta-icono"><img src="images/matercard.png" alt="Mastercard"></div>
@@ -200,14 +196,14 @@
         </div>
 
         <aside class="zona-publicidad publicidad-derecha">
-            <div class="titulo-ad">Top Ventas</div>
+            <div class="titulo-ad" data-lang="ad_top">Top Ventas</div>
             <a href="https://www.amazon.es/PICSIL-Impermeable-Capacidad-Crosstraining-Senderismo/dp/B0DV9GKVM4"
                 target="_blank" class="amazon-card">
                 <div class="img-container"><img src="images/derecha-arriba.jpg" alt="Mochila Táctica"></div>
                 <div class="info-ad">
-                    <p class="titulo-prod">Mochila Táctica 40L</p>
+                    <p class="titulo-prod" data-lang="prod_backpack">Mochila Táctica 40L</p>
                     <div class="precio-ad">129,95€ <i class="fab fa-amazon"></i></div>
-                    <button class="btn-amazon">Ver en Amazon</button>
+                    <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
                 </div>
             </a>
             <a href="https://www.amazon.es/Night-Cat-Tienda-Persona-Ultraligero/dp/B0DYD4D2XB" target="_blank"

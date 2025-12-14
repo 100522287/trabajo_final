@@ -1,5 +1,30 @@
 function validarRegistro() {
-    // 1. Obtener valores
+    // 1. DETECTAR IDIOMA
+    const lang = localStorage.getItem('idioma') || 'es';
+
+    // Diccionario de mensajes de error/éxito
+    const mensajes = {
+        es: {
+            vacios: "Por favor, rellena todos los campos obligatorios.",
+            email: "El correo electrónico no es válido. Debe ser formato 'usuario@dominio.com'.",
+            passRequisitos: "La contraseña debe tener:\n- Mínimo 8 caracteres\n- Al menos una mayúscula\n- Al menos un número\n- Al menos un carácter especial (ej: @, #, $, .)",
+            passNoCoincide: "Las contraseñas no coinciden.",
+            usuarioExiste: "El nombre de usuario '{usuario}' ya existe. Por favor elige otro.",
+            exito: "¡Registro exitoso! Ahora puedes iniciar sesión."
+        },
+        en: {
+            vacios: "Please fill in all required fields.",
+            email: "Invalid email address. Format must be 'user@domain.com'.",
+            passRequisitos: "Password must have:\n- Minimum 8 characters\n- At least one uppercase letter\n- At least one number\n- At least one special character (e.g., @, #, $, .)",
+            passNoCoincide: "Passwords do not match.",
+            usuarioExiste: "The username '{usuario}' already exists. Please choose another one.",
+            exito: "Registration successful! You can now log in."
+        }
+    };
+
+    const msgs = mensajes[lang];
+
+    // 2. Obtener valores
     const nombre = document.getElementById("nombre").value.trim();
     const apellidos = document.getElementById("apellidos").value.trim();
     const usuario = document.getElementById("usuario").value.trim();
@@ -9,45 +34,40 @@ function validarRegistro() {
 
     // --- VALIDACIÓN 1: CAMPOS VACÍOS ---
     if (!nombre || !apellidos || !usuario || !pass1 || !pass2 || !email) {
-        alert("Por favor, rellena todos los campos obligatorios.");
+        alert(msgs.vacios);
         return;
     }
 
-    // --- VALIDACIÓN 2: CORREO ELECTRÓNICO (Igual que en compra) ---
-    // Regex: Empieza con letras/números/puntos/guiones + @ + letras/números + . + letras (2 o más)
+    // --- VALIDACIÓN 2: CORREO ELECTRÓNICO ---
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    
     if (!emailRegex.test(email)) {
-        alert("El correo electrónico no es válido. Debe ser formato 'usuario@dominio.com'.");
+        alert(msgs.email);
         return;
     }
 
     // --- VALIDACIÓN 3: CONTRASEÑA SEGURA ---
-    // Requisitos: 1 Mayúscula, 1 Número, 1 Especial, Mínimo 8 chars
     const passRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
-
     if (!passRegex.test(pass1)) {
-        alert("La contraseña debe tener:\n- Mínimo 8 caracteres\n- Al menos una mayúscula\n- Al menos un número\n- Al menos un carácter especial (ej: @, #, $, .)");
+        alert(msgs.passRequisitos);
         return;
     }
 
     // --- VALIDACIÓN 4: COINCIDENCIA DE CONTRASEÑAS ---
     if (pass1 !== pass2) {
-        alert("Las contraseñas no coinciden.");
+        alert(msgs.passNoCoincide);
         return;
     }
 
     // --- VALIDACIÓN 5: USUARIO EXISTENTE ---
     if (localStorage.getItem("user_" + usuario)) {
-        alert("El nombre de usuario '" + usuario + "' ya existe. Por favor elige otro.");
+        alert(msgs.usuarioExiste.replace("{usuario}", usuario));
         return;
     }
 
     // 3. Crear objeto usuario
-    // Guardamos "nombre" concatenado para que la Home siga saludando correctamente ("Hola, Juan Pérez")
     const nuevoUsuario = {
         nombre: nombre + " " + apellidos, 
-        nombrePila: nombre, // Guardamos por separado por si acaso
+        nombrePila: nombre,
         apellidos: apellidos,
         usuario: usuario,
         password: pass1,
@@ -58,6 +78,6 @@ function validarRegistro() {
     // 4. Guardar en LocalStorage
     localStorage.setItem("user_" + usuario, JSON.stringify(nuevoUsuario));
 
-    alert("¡Registro exitoso! Ahora puedes iniciar sesión.");
+    alert(msgs.exito);
     window.location.href = "login.html";
 }

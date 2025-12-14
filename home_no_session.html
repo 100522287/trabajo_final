@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mochileros por el mundo</title>
+    <link rel="icon" href="images/logo_principal.png" type="image/webp">
     <link rel="stylesheet" type="text/css" href="styles/estilos.css">
 </head>
 
@@ -45,20 +46,20 @@
             <nav class="navbar">
                 <ul class="menu-header-footer">
                     <li><a href="home_no_session.html" class="logo-nav"><img src="images/logo_principal.png" alt="Mochileros Inicio"></a></li>
-                    <li><a href="packs.html">Packs</a></li>
-                    <li><a href="foro.html">Foro</a></li>
-                    <li><a href="articulos.html">Artículos</a></li>
-                    <li><a href="faq.html">Preguntas frecuentes</a></li>                    
-                    <li><a href="otros_rincones.html">Otros rincones</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-
+                    
+                    <li><a href="packs.html" data-lang="nav_packs">Packs</a></li>
+                    <li><a href="foro.html" data-lang="nav_forum">Foro</a></li>
+                    <li><a href="articulos.html" data-lang="nav_articles">Artículos</a></li>
+                    <li><a href="faq.html" data-lang="nav_faq">Preguntas frecuentes</a></li>
+                    <li><a href="otros_rincones.html" data-lang="nav_corners">Otros rincones</a></li>
+                    <li><a href="nosotros.html" data-lang="nav_about">Nosotros</a></li>
                 </ul>
                 <div class="idioma-login" id="panel-usuario-nav">
                     <select id="selector-idioma" class="selector-idioma">
                         <option value="es">Español</option>
                         <option value="en">English</option>
                     </select>
-                    <a href="login.html">Iniciar Sesión</a>
+                    <a href="login.html" data-lang="nav_login">Iniciar Sesión</a>
                 </div>
             </nav>
 
@@ -72,19 +73,16 @@
 
             <section class="seccion-packs">
                 <h2 data-lang="sec_packs">Packs más populares</h2>
-
                 <div class="rejilla_packs" id="contenedor-packs-home">
                     </div>
             </section>
 
             <section class="seccion-articulos" id="articulos">
                 <h2 data-lang="sec_articles">Artículos de utilidad</h2>
-
                 <div class="contenedor-carrusel">
                     <button class="nav-btn" id="boton_izq_articulos">&#60;</button>
-
-                    <div class="track-carrusel" id="track-articulos"></div>
-
+                    <div class="track-carrusel" id="track-articulos">
+                        </div>
                     <button class="nav-btn" id="boton_der_articulos">&#62;</button>
                 </div>
             </section>
@@ -159,13 +157,15 @@
                 <div class="info-ad">
                     <p class="titulo-prod">Tienda Campaña Ultraligera</p>
                     <div class="precio-ad">179,99€ <i class="fab fa-amazon"></i></div>
-                    <button class="btn-amazon">Ver en Amazon</button>
+                    <button class="btn-amazon" data-lang="btn_amazon">Ver en Amazon</button>
                 </div>
             </a>
         </aside>
 
     </div>
+    
     <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/articulos.js"></script>
 </body>
 
 </html>
