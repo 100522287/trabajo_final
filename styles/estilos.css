@@ -724,7 +724,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1500px) {
     .zona-publicidad {
         display: none;
     }
