@@ -96,7 +96,7 @@
 
 .texto-principal p {
     font-size: 0.9rem;
-    color: #666;
+    color: #444;
     line-height: 1.5;
     margin: 0;
     /* TRUCO CLAVE: Cortar texto a 3 líneas para igualar alturas */
@@ -125,13 +125,14 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    color: #888;
+    color: #023E8A;
+    font-weight: 700;
     transition: all 0.3s;
 }
 
 .boton-like:hover {
-    border-color: #e74c3c;
-    color: #e74c3c;
+    border-color: #8e0e00;
+    color: #8e0e00;
 }
 
 .icono-corazon {

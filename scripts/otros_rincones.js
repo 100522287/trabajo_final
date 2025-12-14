@@ -320,7 +320,7 @@ function cargarRincones() {
         let numeroLikes = rincon.likes + (yaVotado ? 1 : 0);
         
         const claseIcono = yaVotado ? 'fas' : 'far';
-        const estiloColor = yaVotado ? 'color: #e74c3c;' : '';
+        const estiloColor = yaVotado ? 'color: #b01200ff;' : '';
 
         // 2. USAR TEXTOS TRADUCIDOS
         const titulo = rincon.titulo[lang] || rincon.titulo.es;
@@ -379,7 +379,7 @@ function activarBotonesLike() {
                 const icono = this.querySelector('.icono-corazon');
                 icono.classList.remove('far'); 
                 icono.classList.add('fas');    
-                this.style.color = '#e74c3c';  
+                this.style.color = '#a51000ff';  
                 
                 icono.classList.add('animacion-latido');
                 setTimeout(() => {
